@@ -44,17 +44,17 @@
 	<div id="toolbar" class="hidden padding-vertical">
 		<div class="row wrapper">
 			<div class="twelve columns text-center">
-				<button id="tab-button-home" title="Home" class="tab-button active" onclick="showTab('home')"><i class="tab-icon home"></i></button>
-				<button id="tab-button-weapons" title="Weapons" class="tab-button" onclick="showTab('weapons')"><i class="tab-icon weapons"></i></button>
-				<button id="tab-button-bows" title="Bows" class="tab-button" onclick="showTab('bows')"><i class="tab-icon bows"></i></button>
-				<button id="tab-button-shields" title="Shields" class="tab-button" onclick="showTab('shields')"><i class="tab-icon shields"></i></button>
-				<button id="tab-button-armors" title="Armors" class="tab-button" onclick="showTab('armors')"><i class="tab-icon clothes"></i></button>
-				<button id="tab-button-materials" title="Materials" class="tab-button" onclick="showTab('materials')"><i class="tab-icon materials"></i></button>
-				<button id="tab-button-food" title="Food" class="tab-button" onclick="showTab('food')"><i class="tab-icon food"></i></button>
-				<button id="tab-button-devices" title="Zonai devices" class="tab-button" onclick="showTab('devices')"><i class="tab-icon devices"></i></button>
-				<button id="tab-button-key" title="Key items" class="tab-button" onclick="showTab('key')"><i class="tab-icon other"></i></button>
-				<button id="tab-button-horses" title="Horses" class="tab-button" onclick="showTab('horses')"><i class="tab-icon horses"></i></button>
-				<button id="tab-button-master" title="Master editor" class="tab-button" onclick="showTab('master')"><i class="tab-icon master"></i></button>
+				<button id="tab-button-home" title="主页" class="tab-button active" onclick="showTab('home')"><i class="tab-icon home"></i></button>
+				<button id="tab-button-weapons" title="武器" class="tab-button" onclick="showTab('weapons')"><i class="tab-icon weapons"></i></button>
+				<button id="tab-button-bows" title="弓箭" class="tab-button" onclick="showTab('bows')"><i class="tab-icon bows"></i></button>
+				<button id="tab-button-shields" title="盾" class="tab-button" onclick="showTab('shields')"><i class="tab-icon shields"></i></button>
+				<button id="tab-button-armors" title="防具" class="tab-button" onclick="showTab('armors')"><i class="tab-icon clothes"></i></button>
+				<button id="tab-button-materials" title="材料" class="tab-button" onclick="showTab('materials')"><i class="tab-icon materials"></i></button>
+				<button id="tab-button-food" title="料理" class="tab-button" onclick="showTab('food')"><i class="tab-icon food"></i></button>
+				<button id="tab-button-devices" title="左纳乌装置" class="tab-button" onclick="showTab('devices')"><i class="tab-icon devices"></i></button>
+				<button id="tab-button-key" title="重要物品" class="tab-button" onclick="showTab('key')"><i class="tab-icon other"></i></button>
+				<button id="tab-button-horses" title="马匹" class="tab-button" onclick="showTab('horses')"><i class="tab-icon horses"></i></button>
+				<button id="tab-button-master" title="编辑大师" class="tab-button" onclick="showTab('master')"><i class="tab-icon master"></i></button>
 				| <button class="button with-icon icon3" onclick="closeFile()">Close file</button>
 				<button class="button colored blue with-icon icon9" onclick="saveChanges()">Save changes</button>
 			</div>
@@ -70,17 +70,17 @@
 	<!-- TAB: HOME -->
 	<div id="tab-home">
 		<!-- RUPEES -->
-		<h3 class="border-red">Stats</h3>
+		<h3 class="border-red">状态</h3>
 		<div class="row mb-10">
-			<div class="ten columns"><label>Game version</label></div>
+			<div class="ten columns"><label>游戏版本</label></div>
 			<div class="two columns text-right"><span id="span-version"></span></div>
 		</div>
 		<div class="row mb-10">
-			<div class="ten columns"><label>Playtime</label></div>
+			<div class="ten columns"><label>游戏时间</label></div>
 			<div class="two columns text-right"><span id="span-playtime"></span></div>
 		</div>
 		<div class="row mb-5">
-			<div class="ten columns"><label for="number-rupees">Rupees</label></div>
+			<div class="ten columns"><label for="number-rupees">卢比</label></div>
 			<div class="two columns"><input id="number-rupees" class="full-width" type="text" /></div>
 		</div>
 		<!-- 
@@ -105,72 +105,72 @@
 			<div class="two columns text-right"><input id="checkbox-motorcycle" type="checkbox" value="1" /></div>
 		</div>-->
 		<div class="row mb-5">
-			<div class="ten columns"><label for="select-max-hearts">Max. hearts</label></div>
+			<div class="ten columns"><label for="select-max-hearts">最大心心数</label></div>
 			<div class="two columns">
 				<select id="select-max-hearts" class="full-width">
-					<option value="4">1 heart</option>
-					<option value="8">2 hearts</option>
-					<option value="12">3 hearts</option>
-					<option value="16">4 hearts</option>
-					<option value="20">5 hearts</option>
-					<option value="24">6 hearts</option>
-					<option value="28">7 hearts</option>
-					<option value="32">8 hearts</option>
-					<option value="36">9 hearts</option>
-					<option value="40">10 hearts</option>
-					<option value="44">11 hearts</option>
-					<option value="48">12 hearts</option>
-					<option value="52">13 hearts</option>
-					<option value="56">14 hearts</option>
-					<option value="60">15 hearts</option>
-					<option value="64">16 hearts</option>
-					<option value="68">17 hearts</option>
-					<option value="72">18 hearts</option>
-					<option value="76">19 hearts</option>
-					<option value="80">20 hearts</option>
-					<option value="84">21 hearts</option>
-					<option value="88">22 hearts</option>
-					<option value="92">23 hearts</option>
-					<option value="96">24 hearts</option>
-					<option value="100">25 hearts</option>
-					<option value="104">26 hearts</option>
-					<option value="108">27 hearts</option>
-					<option value="112">28 hearts</option>
-					<option value="116">29 hearts</option>
-					<option value="120">30 hearts</option>
-					<option value="124">31 hearts</option>
-					<option value="128">32 hearts</option>
-					<option value="132">33 hearts</option>
-					<option value="136">34 hearts</option>
-					<option value="140">35 hearts</option>
-					<option value="144">36 hearts</option>
-					<option value="148">37 hearts</option>
-					<option value="152">38 hearts</option>
-					<option value="156">39 hearts</option>
-					<option value="160">40 hearts</option>
+					<option value="4">1个心心</option>
+					<option value="8">2个心心</option>
+					<option value="12">3个心心</option>
+					<option value="16">4个心心</option>
+					<option value="20">5个心心</option>
+					<option value="24">6个心心</option>
+					<option value="28">7个心心</option>
+					<option value="32">8个心心</option>
+					<option value="36">9个心心</option>
+					<option value="40">10个心心</option>
+					<option value="44">11个心心</option>
+					<option value="48">12个心心</option>
+					<option value="52">13个心心</option>
+					<option value="56">14个心心</option>
+					<option value="60">15个心心</option>
+					<option value="64">16个心心</option>
+					<option value="68">17个心心</option>
+					<option value="72">18个心心</option>
+					<option value="76">19个心心</option>
+					<option value="80">20个心心</option>
+					<option value="84">21个心心</option>
+					<option value="88">22个心心</option>
+					<option value="92">23个心心</option>
+					<option value="96">24个心心</option>
+					<option value="100">25个心心</option>
+					<option value="104">26个心心</option>
+					<option value="108">27个心心</option>
+					<option value="112">28个心心</option>
+					<option value="116">29个心心</option>
+					<option value="120">30个心心</option>
+					<option value="124">31个心心</option>
+					<option value="128">32个心心</option>
+					<option value="132">33个心心</option>
+					<option value="136">34个心心</option>
+					<option value="140">35个心心</option>
+					<option value="144">36个心心</option>
+					<option value="148">37个心心</option>
+					<option value="152">38个心心</option>
+					<option value="156">39个心心</option>
+					<option value="160">40个心心</option>
 				</select>
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="ten columns"><label for="select-max-stamina">Max. stamina</label></div>
+			<div class="ten columns"><label for="select-max-stamina">最大精力数</label></div>
 			<div class="two columns">
 				<select id="select-max-stamina" class="full-width">
-					<option value="1148846080">1 wheel</option>
-					<option value="1150681088">1 wheel+1/5</option>
-					<option value="1152319488">1 wheel+2/5</option>
-					<option value="1153957888">1 wheel+3/5</option>
-					<option value="1155596288">1 wheel+4/5</option>
-					<option value="1157234688">2 wheels</option>
-					<option value="1158250496">2 wheels+1/5</option>
-					<option value="1159069696">2 wheels+2/5</option>
-					<option value="1159888896">2 wheels+3/5</option>
-					<option value="1160708096">2 wheels+4/5</option>
-					<option value="1161527296">3 wheels</option>
+					<option value="1148846080">1圈</option>
+					<option value="1150681088">1圈+1/5</option>
+					<option value="1152319488">1圈+2/5</option>
+					<option value="1153957888">1圈+3/5</option>
+					<option value="1155596288">1圈+4/5</option>
+					<option value="1157234688">2圈</option>
+					<option value="1158250496">2圈+1/5</option>
+					<option value="1159069696">2圈+2/5</option>
+					<option value="1159888896">2圈+3/5</option>
+					<option value="1160708096">2圈+4/5</option>
+					<option value="1161527296">3圈</option>
 				</select>
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="ten columns"><label for="select-max-battery">Battery size</label></div>
+			<div class="ten columns"><label for="select-max-battery">电池大小</label></div>
 			<div class="two columns">
 				<select id="select-max-battery" class="full-width">
 					<option value="3000">3000</option>
@@ -223,22 +223,22 @@
 			</div>
 		</div>
 		<div class="row mb-5">
-			<div class="ten columns"><label for="number-pony-points">Pony points</label></div>
+			<div class="ten columns"><label for="number-pony-points">驿站积分</label></div>
 			<div class="two columns"><input id="number-pony-points" class="full-width" type="text" /></div>
 		</div>
 		
 		<!-- Pouch size -->
-		<h3 class="border-green">Pouch size</h3>
+		<h3 class="border-green">袋子大小</h3>
 		<div class="row mb-5">
-			<div class="ten columns"><label for="number-pouch-size-swords">Pouch size swords</label></div>
+			<div class="ten columns"><label for="number-pouch-size-swords">剑袋大小</label></div>
 			<div class="two columns"><input id="number-pouch-size-swords" class="full-width" type="text" /></div>
 		</div>
 		<div class="row mb-5">
-			<div class="ten columns"><label for="number-pouch-size-bows">Pouch size bows</label></div>
+			<div class="ten columns"><label for="number-pouch-size-bows">弓袋大小</label></div>
 			<div class="two columns"><input id="number-pouch-size-bows" class="full-width" type="text" /></div>
 		</div>
 		<div class="row">
-			<div class="ten columns"><label for="number-pouch-size-shields">Pouch size shields</label></div>
+			<div class="ten columns"><label for="number-pouch-size-shields">盾袋大小</label></div>
 			<div class="two columns"><input id="number-pouch-size-shields" class="full-width" type="text" /></div>
 		</div>
 	
@@ -323,75 +323,75 @@
 	
 	<!-- TAB: WEAPONS -->
 	<div id="tab-weapons">
-		<h3>Weapons</h3><div id="container-weapons"></div>
+		<h3>武器</h3><div id="container-weapons"></div>
 		<div class="text-center">
-			<button onclick="SavegameEditor.restoreDurability('weapons')">Restore durability</button>
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('weapons')">Add weapon</button>
+			<button onclick="SavegameEditor.restoreDurability('weapons')">恢复耐久</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('weapons')">新增武器</button>
 		</div>
 	</div>
 
 	<!-- TAB: BOWS -->
 	<div id="tab-bows">
-		<h3>Bows</h3><div id="container-bows"></div>
+		<h3>弓箭</h3><div id="container-bows"></div>
 		<div class="text-center">
-			<button onclick="SavegameEditor.restoreDurability('bows')">Restore durability</button>
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('bows')">Add bow</button>
+			<button onclick="SavegameEditor.restoreDurability('bows')">恢复耐久</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('bows')">新增弓</button>
 		</div>
-		<h3>Arrows</h3><div id="container-arrows"></div>
+		<h3>箭</h3><div id="container-arrows"></div>
 	</div>
 
 	<!-- TAB: SHIELDS -->
 	<div id="tab-shields">
-		<h3>Shields</h3><div id="container-shields"></div>
+		<h3>盾</h3><div id="container-shields"></div>
 		<div class="text-center">
-			<button onclick="SavegameEditor.restoreDurability('shields')">Restore durability</button>
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('shields')">Add shield</button>
+			<button onclick="SavegameEditor.restoreDurability('shields')">恢复耐久</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('shields')">新增盾</button>
 		</div>
 	</div>
 
 	<!-- TAB: ARMORS -->
 	<div id="tab-armors">
-		<h3>Armors</h3><div id="container-armors"></div>
+		<h3>防具</h3><div id="container-armors"></div>
 		<div class="text-center">
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('armors')">Add armor</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('armors')">新增防具</button>
 		</div>
 	</div>
 
 	<!-- TAB: MATERIALS -->
 	<div id="tab-materials">
-		<h3>Materials</h3><div id="container-materials"></div>
+		<h3>材料</h3><div id="container-materials"></div>
 		<div class="text-center">
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('materials')">Add material</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('materials')">新增材料</button>
 		</div>
 	</div>
 
 	<!-- TAB: FOOD -->
 	<div id="tab-food">
-		<h3>Food</h3><div id="container-food"></div>
+		<h3>料理</h3><div id="container-food"></div>
 		<div class="text-center">
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('food')">Add food</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('food')">新增料理</button>
 		</div>
 	</div>
 
 	<!-- TAB: ZONAI DEVICES -->
 	<div id="tab-devices">
-		<h3>Zonai devices</h3><div id="container-devices"></div>
+		<h3>左纳乌装置</h3><div id="container-devices"></div>
 		<div class="text-center">
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('devices')">Add zonai device</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('devices')">新增左纳乌装置</button>
 		</div>
 	</div>
 
 	<!-- TAB: KEY -->
 	<div id="tab-key">
-		<h3>Key items</h3><div id="container-key"></div>
+		<h3>重要物品</h3><div id="container-key"></div>
 		<div class="text-center">
-			<button class="with-icon icon1" onclick="SavegameEditor.addItem('key')">Add key item</button>
+			<button class="with-icon icon1" onclick="SavegameEditor.addItem('key')">新增重要物品</button>
 		</div>
 	</div>
 
 	<!-- TAB: HORSES -->
 	<div id="tab-horses">
-		<h3 class="border-blue">Horses</h3><div id="container-horses"></div>
+		<h3 class="border-blue">马匹</h3><div id="container-horses"></div>
 		<!-- <div class="row"><div class="twelve columns">Untammed horse</div></div>
 		<div class="row" id="row-horse6">
 			<div class="three columns end"><select id="select-horse6-type"></select></div>
@@ -406,11 +406,11 @@
 
 	<!-- TAB: MASTER EDITOR -->
 	<div id="tab-master">
-		<div id="master-editor-loading" class="text-center">Master editor is loading...</div>
+		<div id="master-editor-loading" class="text-center">编辑大师正在加载...</div>
 		<div id="master-editor-hidden" class="hidden">
-			<label for="select-filters">Filter: </label>
+			<label for="select-filters">筛选: </label>
 			<select id="select-filters" onchange="TOTKMasterEditor.refreshResults()">
-				<option value="">- All -</option>
+				<option value="">- 全部 -</option>
 				<!-- <option value="WolfLink_|Amiibo">Amiibo</option>
 				<option value="_DispNameFlag$">Display flag names</option>
 				<option value="100enemy">DLC1</option>
@@ -425,7 +425,7 @@
 			</select>
 			<input id="input-custom-filter" type="text" placeholder="Search hash keys" onchange="TOTKMasterEditor.refreshResults()" />
 			
-			 | <label for="select-page">Page: </label>
+			 | <label for="select-page">页码: </label>
 			<button id="page-prev" onclick="TOTKMasterEditor.prevPage()">&laquo;</button>
 			<select id="select-page" class="small" onchange="TOTKMasterEditor.setPage(this.selectedIndex)"></select>
 			<button id="page-next" onclick="TOTKMasterEditor.nextPage()">&raquo;</button>

@@ -213,7 +213,7 @@ SavegameEditor={
 			SavegameEditor.editItem(item);
 		}, false);
 		if(typeof item.fuseId==='string' && item.fuseId){
-			spanItemId.innerHTML+=' <small style="color:#3d5b50">(fused: '+item.fuseId+')</small>';
+			spanItemId.innerHTML+=' <small style="color:#3d5b50">(余料建造材料: '+item.fuseId+')</small>';
 		}
 
 
