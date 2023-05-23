@@ -14,6 +14,8 @@
 	<script type="text/javascript" src="./zelda-totk.class.equipment.js"></script>
 	<script type="text/javascript" src="./zelda-totk.class.horse.js"></script>
 	<script type="text/javascript" src="./zelda-totk.class.item.js"></script>
+	<script type="text/javascript" src="./zelda-totk.class.korok.js"></script>
+	<script type="text/javascript" src="./zelda-totk.class.mappin.js"></script>
 	<script type="text/javascript" src="./zelda-totk.master.js"></script>
 	<script type="text/javascript"><!--
 		/* service worker */
@@ -263,17 +265,23 @@
 
 
 		<!-- COMPLETIONISM -->
-		<!-- <h3 class="border-blue">Completionism</h3>
-		<div class="row">
-			<div class="seven columns"><label for="number-koroks">Korok seeds</label></div>
+		<h3 class="border-blue">Completionism</h3>
+		<div class="row mb-10">
+			<div class="seven columns">Map pins <span id="span-pin-counter"></span></div>
 			<div class="five columns text-right">
-				<input type="text" id="number-koroks" style="width:50px" disabled />
-				<button onclick="unlockKoroks()">Get all</button>
-				<button onclick="addKoroksToMap()">Add pins to Map</button>
+				<button onclick="SavegameEditor.clearAllMapPins()">Remove all map pins</button>
 			</div>
 		</div>
+		<!-- <div class="row mb-10">
+			<div class="seven columns"><label for="number-koroks">Korok seeds</label></div>
+			<div class="five columns text-right">
+				<button onclick="SavegameEditor.addKorokPins(0, 299)">Pin korok #001-#300 to map</button>
+				<button onclick="SavegameEditor.addKorokPins(300, 599)">Pin koroks #301-#600 to map</button>
+				<button onclick="SavegameEditor.addKorokPins(600, 899)">Pin koroks #601-#900 to map</button>
+			</div>
+		</div> -->
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="seven columns"><label for="number-defeated-hinox">Defeated Hinox</label></div>
 			<div class="five columns text-right">
 				<input type="text" id="number-defeated-hinox" style="width:50px" disabled />
