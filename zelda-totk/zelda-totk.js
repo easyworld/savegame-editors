@@ -75,12 +75,13 @@ SavegameEditor={
 		0xfee5cd77, 'ArrayHorseReins',
 		0xdcd9f005, 'ArrayHorseBonds',
 		0xcea848b6, 'ArrayHorseSpecialTypes',
-		0xafe462c3, 'ArrayHorseStatsStrength', //posible strength
+		0xafe462c3, 'ArrayHorseStatsStrength',
 		0xc0775abf, 'ArrayHorseStatsSpeed',
-		0xc8454f7c, 'ArrayHorseStatsStamina', //posible stamina
+		0xc8454f7c, 'ArrayHorseStatsStamina',
 		0x10d564d7, 'ArrayHorseStatsPull',
 		0xfbf44df2, 'ArrayHorseIconPatterns',
 		0x48bfcf08, 'ArrayHorseIconEyeColors',
+		0xa0e854ea, 'WildTammedHorseId',
 
 
 		0x14d7f4c4, 'ArrayMapPinIcons',
@@ -249,7 +250,7 @@ SavegameEditor={
 			}
 		}
 	},
-	_getOffsetsByHashes:function(hashes){
+	_getOffsetsByHashes:function(hashes, single){
 		var offsets={};
 		for(var i=0x000028; i<0x03c800; i+=8){
 			var hash=tempFile.readU32(i);
@@ -257,6 +258,8 @@ SavegameEditor={
 			if(hash===0xa3db7114){ //found MetaData.SaveTypeHash
 				break;
 			}else if(foundHashIndex!==-1){
+				if(single)
+					return i+4;
 				offsets[hashes[foundHashIndex]]=i+4;
 			}
 		}
@@ -265,6 +268,8 @@ SavegameEditor={
 				console.error('hash ['+i+']:'+hashes[i].toString(16)+' not found');
 			}
 		}
+		if(single)
+			return false;
 		return offsets;
 	},
 
@@ -534,14 +539,22 @@ SavegameEditor={
 		return count;
 	},
 
-	refreshMapPinsCounter:function(){
-		var count=MapPin.count(this.currentItems.mapPins);
-		setValue('pin-counter', count+'<small>/'+MapPin.MAX+'</small>');
+	_refreshCounter:function(container, val, max){
+		setValue(container+'-counter', val+'<small>/'+max+'</small>');
 	},
-
+	refreshMapPinsCounter:function(){
+		this._refreshCounter('pin', MapPin.count(this.currentItems.mapPins), MapPin.MAX);
+	},
 	refreshCompendiumCounter:function(){
-		var count=Compendium.count();
-		setValue('compendium-counter', count.total+'<small>/'+Compendium.HASHES_GOT_FLAGS.length+'</small>');
+		this._refreshCounter('compendium', Compendium.count().total, Compendium.HASHES_GOT_FLAGS.length);
+	},
+	refreshShrineCounters:function(){
+		this._refreshCounter('shrines-found', Shrine.countFound(), Shrine.HASHES_FOUND.length);
+		this._refreshCounter('shrines-clear', Shrine.countClear(), Shrine.HASHES_STATUS.length);
+	},
+	refreshLightrootCounters:function(){
+		this._refreshCounter('lightroots-found', Lightroot.countFound(), Lightroot.HASHES_FOUND.length);
+		this._refreshCounter('lightroots-clear', Lightroot.countClear(), Lightroot.HASHES_STATUS.length);
 	},
 
 	/* check if savegame is valid */
@@ -766,6 +779,10 @@ SavegameEditor={
 
 		/* map pins */
 		this.refreshMapPinsCounter();
+
+		/* shrines/lightroots */
+		this.refreshShrineCounters();
+		this.refreshLightrootCounters();
 		
 		/* compendium */
 		this.refreshCompendiumCounter();
@@ -827,6 +844,7 @@ SavegameEditor={
 				item.save();
 			});
 		});
+		Item.fixKeyAvailabilityFlags();
 
 
 		/* HORSES */
@@ -859,10 +877,12 @@ function showTab(newTab){
 	}
 
 	if(newTab==='master'){
-		if(TOTKMasterEditor.isLoaded())
+		if(TOTKMasterEditor.isLoaded()){
 			TOTKMasterEditor.refreshResults();
-		else
+			get('input-custom-filter').focus();
+		}else{
 			TOTKMasterEditor.loadHashes();
+		}
 	}
 }
 
@@ -889,23 +909,4 @@ window.addEventListener('scroll', onScroll, false);
 
 function capitalizeCategoryId(catId){
 	return (catId.charAt(0).toUpperCase() + catId.substr(1)).replace(/s$/, '')
-}
-
-
-
-
-
-var masterModeLoaded=false;
-function loadMasterMode(){
-	if(!masterModeLoaded){
-		var script=document.createElement('script');
-		script.type='text/javascript';
-		script.src='./zelda-totk.master.js';
-		script.onload=function(){
-			masterModeLoaded=true;
-			document.getElementById('tab-button-master').disabled=false;
-			//TOTKMasterEditor.prepare();
-		};
-		document.getElementsByTagName('head')[0].appendChild(script);
-	}
 }

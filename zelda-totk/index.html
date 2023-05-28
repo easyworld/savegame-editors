@@ -16,6 +16,7 @@
 	<script type="text/javascript" src="./zelda-totk.class.item.js"></script>
 	<script type="text/javascript" src="./zelda-totk.class.korok.js"></script>
 	<script type="text/javascript" src="./zelda-totk.class.mappin.js"></script>
+	<script type="text/javascript" src="./zelda-totk.class.shrine.js"></script>
 	<script type="text/javascript" src="./zelda-totk.class.compendium.js"></script>
 	<script type="text/javascript" src="./zelda-totk.master.js"></script>
 	<script type="text/javascript"><!--
@@ -313,6 +314,20 @@
 				<button onclick="Compendium.setToStock(true)">Unlock missing</button>
 			</div>
 		</div>
+		<div class="row mb-10">
+			<div class="four columns">Shrines - Found: <span id="span-shrines-found-counter"></span> - Cleared: <span id="span-shrines-clear-counter"></span></div>
+			<div class="eight columns text-right">
+				<button onclick="Shrine.setAllAsFound()">Set all shrines as found</button>
+				<button onclick="Shrine.setAllAsClear()">Set all shrines as cleared</button>
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="four columns">Lightroots - Found: <span id="span-lightroots-found-counter"></span> - Cleared: <span id="span-lightroots-clear-counter"></span></div>
+			<div class="eight columns text-right">
+				<button onclick="Lightroot.setAllAsFound()">Set all lightroots as found</button>
+				<button onclick="Lightroot.setAllAsClear()">Set all lightroots as activated</button>
+			</div>
+		</div>
 
 		<!-- <div class="row">
 			<div class="seven columns">Visited locations</div>
@@ -411,30 +426,21 @@
 	<div id="tab-master">
 		<div id="master-editor-loading" class="text-center">编辑大师正在加载...</div>
 		<div id="master-editor-hidden" class="hidden">
-			<label for="select-filters">筛选: </label>
-			<select id="select-filters" onchange="TOTKMasterEditor.refreshResults()">
-				<option value="">- 全部 -</option>
-				<!-- <option value="WolfLink_|Amiibo">Amiibo</option>
-				<option value="_DispNameFlag$">Display flag names</option>
-				<option value="100enemy">DLC1</option>
-				<option value="Motorcycle">DLC2</option>
-				<option value="Horse_">Horses</option>
-				<option value="Defeat_Enemy_|Defeated.+Num">Defeated enemies</option>
-				<option value="Porch|Cook">Items</option>
-				<option value="IsGet_">Get flags</option>
-				<option value="HiddenKorok|OldKorok_">Korok</option>
-				<option value="^Location_">Visited locations</option>
-				<option value="AlbumPicture|PictureBook">Compendium</option> -->
-			</select>
-			<input id="input-custom-filter" type="text" placeholder="Search hash keys" onchange="TOTKMasterEditor.refreshResults()" />
-			
-			 | <label for="select-page">页码: </label>
-			<button id="page-prev" onclick="TOTKMasterEditor.prevPage()">&laquo;</button>
-			<select id="select-page" class="small" onchange="TOTKMasterEditor.setPage(this.selectedIndex)"></select>
-			<button id="page-next" onclick="TOTKMasterEditor.nextPage()">&raquo;</button>
-
+			<div>
+				<label>搜索 <input id="input-custom-filter" type="text" list="knownHashes" placeholder="Search variables" onchange="TOTKMasterEditor.refreshResults()" /></label>
+				<datalist id="knownHashes">
+					<option value="paraglider fabric">Usable paraglider fabrics</option>
+					<option value="tower">Hyrule tower activation</option>
+				</datalist>
+			</div>
 
 			<table id="table"></table>
+			<div class="text-center">
+				<label for="select-page">页码: </label>
+				<button id="page-prev" onclick="TOTKMasterEditor.prevPage()">&laquo;</button>
+				<select id="select-page" class="small" onchange="TOTKMasterEditor.setPage(this.selectedIndex)"></select>
+				<button id="page-next" onclick="TOTKMasterEditor.nextPage()">&raquo;</button>
+			</div>
 		</div>
 	</div>
 

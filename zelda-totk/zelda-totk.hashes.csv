@@ -1,46 +1,99 @@
 2cda0c19;3;恶魔神像
+7ff848d1;1;Usable paraglider fabric: Default
+b65bc9d7;1;Usable paraglider fabric: Goron
+41929f49;1;Usable paraglider fabric: Zora
+084da01f;1;Usable paraglider fabric: Gerudo
+31a2d1cc;1;Usable paraglider fabric: Royal Emblem
+865f713d;1;Usable paraglider fabric: Zonai
+30669b55;1;Usable paraglider fabric: Sheikah
+022aef11;1;Usable paraglider fabric: Yiga
+112734b9;1;Usable paraglider fabric: Monster-Control-Crew
+dbc821f2;1;Usable paraglider fabric: Zonai Survey Team
+1ecc8c93;1;Usable paraglider fabric: God Horse
+405203b9;1;Usable paraglider fabric: Lurelin
+7c38e018;1;Usable paraglider fabric: Lucky Clover Gazette
+0636a9e7;1;Usable paraglider fabric: Hudson Construction
+09865592;1;Usable paraglider fabric: Koltin
+57129d72;1;Usable paraglider fabric: Korok
+f4035866;1;Usable paraglider fabric: Grizzlemaw-Bear
+c80d0bf1;1;Usable paraglider fabric: Rotver
+96427113;1;Usable paraglider fabric: Cece
+8ef713e8;1;Usable paraglider fabric: Aerocuda
+92754bbd;1;Usable paraglider fabric: Eldin-Ostrich
+94d2472d;1;Usable paraglider fabric: Cucco
+e6cacf83;1;Usable paraglider fabric: Horse
+85a4e8e3;1;Usable paraglider fabric: Chuchu
+ca1847dd;1;Usable paraglider fabric: Lynel
+8c007dbc;1;Usable paraglider fabric: Griok
+a2aec992;1;Usable paraglider fabric: Stalnox
+7c552e01;1;Usable paraglider fabric: Tunic of Memories
+ca76a631;1;Usable paraglider fabric: Hylian-Hood
+d9c206b1;1;Usable paraglider fabric: Hyrule-Princess
+6443f768;1;Usable paraglider fabric: Goron-Champion
+397217b2;1;Usable paraglider fabric: Rito-Champion
+6fb24dcc;1;Usable paraglider fabric: Zora-Champion
+38267d74;1;Usable paraglider fabric: Gerudo-Champion
+ca2baf8b;1;Usable paraglider fabric: Ancient-Sheikah
+500ce8e9;1;Usable paraglider fabric: Bokoblin
+861db450;1;Usable paraglider fabric: Demon King
+8dbea34c;1;Usable paraglider fabric: King of Red Lions
+d552e642;1;Usable paraglider fabric: Sheik's
+6199467d;1;Usable paraglider fabric: Mirror of Twilight
+6625f898;1;Usable paraglider fabric: Princess of Twilight
+63452b97;1;Usable paraglider fabric: Lon Lon Ranch
+53e2da50;1;Usable paraglider fabric: Majora's Mask
+ee3f78e3;1;Usable paraglider fabric: Bygone-Royal
+f2d50ecf;1;Usable paraglider fabric: Sword-Spirit
+a4bf8025;1;Usable paraglider fabric: Pixel
+0f1e166d;1;Usable paraglider fabric: Egg
+c9ab8463;1;Usable paraglider fabric: Goddess
+21170251;1;Usable paraglider fabric: Champion's Leathers
+eaae73a3;1;Usable paraglider fabric: Princess Zelda
+a5ecfeec;1;Usable paraglider fabric: Gerudo-King
+93e7260f;1;Usable paraglider fabric: Nostalgic
+6688319b;1;Usable paraglider fabric: Addison's
 3c07217a;1;监视堡垒 (鸟望台 - 发现)
 b8fb6253;1;监视堡垒 (鸟望台 - 激活)
 034a2acf;1;监视堡垒 (鸟望台 - 地图已显示)
+ec38c3be;1;拉布拉山 (鸟望台 - 发现)
+d0236be5;1;拉布拉山 (鸟望台 - 激活)
+1b6b8850;1;拉布拉山 (鸟望台 - 地图已显示)
+6ee7a9b4;1;茨茨齐齐雪原 (鸟望台 - 发现)
+1f4b2837;1;茨茨齐齐雪原 (鸟望台 - 激活)
+41791b8b;1;茨茨齐齐雪原 (鸟望台 - 地图已显示)
+c1b1272e;1;奥尔汀峡谷 (鸟望台 - 发现)
+1f365304;1;奥尔汀峡谷 (鸟望台 - 激活)
+ca45e956;1;奥尔汀峡谷 (鸟望台 - 地图已显示)
+bc9458f6;1;乌尔利山 (鸟望台 - 发现)
+8da52227;1;乌尔利山 (鸟望台 - 激活)
+0d153cc2;1;乌尔利山 (鸟望台 - 地图已显示)
+6bbc4bc5;1;撒哈斯拉平原 (鸟望台 - 发现)
+8462f080;1;撒哈斯拉平原 (鸟望台 - 激活)
+1dc77e40;1;撒哈斯拉平原 (鸟望台 - 地图已显示)
+9304ce23;1;卓拉台地 (鸟望台 - 发现)
+b0ef5321;1;卓拉台地 (鸟望台 - 激活)
+f43e73ac;1;卓拉台地 (鸟望台 - 地图已显示)
+5eee2b50;1;海拉鲁平原 (鸟望台 - 发现)
+e8931088;1;海拉鲁平原 (鸟望台 - 激活)
+daa808e8;1;海拉鲁平原 (鸟望台 - 地图已显示)
 e0418686;1;格鲁德峡谷 (鸟望台 - 发现)
 0aab3354;1;格鲁德峡谷 (鸟望台 - 激活)
 46404d81;1;格鲁德峡谷 (鸟望台 - 地图已显示)
+89b01713;1;格鲁德高地 (鸟望台 - 发现)
+9ee68f49;1;格鲁德高地 (鸟望台 - 激活)
+d1b133ab;1;格鲁德高地 (鸟望台 - 地图已显示)
+97ec4114;1;拉贝拉湿地带 (鸟望台 - 发现)
+b2295624;1;拉贝拉湿地带 (鸟望台 - 激活)
+0acfd32d;1;拉贝拉湿地带 (鸟望台 - 地图已显示)
+8fabb43f;1;德依布朗遗迹 (鸟望台 - 发现)
+fcb4ddb7;1;德依布朗遗迹 (鸟望台 - 激活)
+81393e2f;1;德依布朗遗迹 (鸟望台 - 地图已显示)
 db253c3e;1;泡泡拉高地 (鸟望台 - 发现)
 71fb216e;1;泡泡拉高地 (鸟望台 - 激活)
 14763a6d;1;泡泡拉高地 (鸟望台 - 地图已显示)
 a7aea58b;1;拉聂尔山 (鸟望台 - 发现)
 dc645a4b;1;拉聂尔山 (鸟望台 - 激活)
 d4258836;1;拉聂尔山 (鸟望台 - 地图已显示)
-9304ce23;1;卓拉台地 (鸟望台 - 发现)
-b0ef5321;1;卓拉台地 (鸟望台 - 激活)
-f43e73ac;1;卓拉台地 (鸟望台 - 地图已显示)
-bc9458f6;1;乌尔利山 (鸟望台 - 发现)
-8da52227;1;乌尔利山 (鸟望台 - 激活)
-0d153cc2;1;乌尔利山 (鸟望台 - 地图已显示)
-c1b1272e;1;奥尔汀峡谷 (鸟望台 - 发现)
-1f365304;1;奥尔汀峡谷 (鸟望台 - 激活)
-ca45e956;1;奥尔汀峡谷 (鸟望台 - 地图已显示)
-8fabb43f;1;德依布朗遗迹 (鸟望台 - 发现)
-fcb4ddb7;1;德依布朗遗迹 (鸟望台 - 激活)
-81393e2f;1;德依布朗遗迹 (鸟望台 - 地图已显示)
-89b01713;1;格鲁德高地 (鸟望台 - 发现)
-9ee68f49;1;格鲁德高地 (鸟望台 - 激活)
-d1b133ab;1;格鲁德高地 (鸟望台 - 地图已显示)
-5eee2b50;1;海拉鲁平原 (鸟望台 - 发现)
-e8931088;1;海拉鲁平原 (鸟望台 - 激活)
-daa808e8;1;海拉鲁平原 (鸟望台 - 地图已显示)
-97ec4114;1;拉贝拉湿地带 (鸟望台 - 发现)
-b2295624;1;拉贝拉湿地带 (鸟望台 - 激活)
-0acfd32d;1;拉贝拉湿地带 (鸟望台 - 地图已显示)
-6ee7a9b4;1;茨茨齐齐雪原 (鸟望台 - 发现)
-1f4b2837;1;茨茨齐齐雪原 (鸟望台 - 激活)
-41791b8b;1;茨茨齐齐雪原 (鸟望台 - 地图已显示)
 f4415c10;1;卡尔加岭 (鸟望台 - 发现)
 f6c6d844;1;卡尔加岭 (鸟望台 - 激活)
 436547d5;1;卡尔加岭 (鸟望台 - 地图已显示)
-ec38c3be;1;拉布拉山 (鸟望台 - 发现)
-d0236be5;1;拉布拉山 (鸟望台 - 激活)
-1b6b8850;1;拉布拉山 (鸟望台 - 地图已显示)
-6bbc4bc5;1;撒哈斯拉平原 (鸟望台 - 发现)
-8462f080;1;撒哈斯拉平原 (鸟望台 - 激活)
-1dc77e40;1;撒哈斯拉平原 (鸟望台 - 地图已显示)
