@@ -51,9 +51,9 @@ Compendium.setToStock=function(all){
 	}
 
 	if(all){
-		MarcDialogs.alert(count+' pictures unlocked.');
+		MarcDialogs.alert(count+'张图鉴已解锁.');
 	}else{
-		MarcDialogs.alert(count+' pictures set to stock.<br/>You can now delete all .jpg images in /picturebook/ folder');
+		MarcDialogs.alert(count+'张图鉴已恢复.<br/>你可以删除 /picturebook/ 文件夹里的所有.jpg文件');
 	}
 	SavegameEditor.refreshCompendiumCounter();
 	return count;

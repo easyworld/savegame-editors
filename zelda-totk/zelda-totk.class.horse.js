@@ -122,29 +122,29 @@ Horse.buildHtmlElements=function(item){
 			newVal='a';
 		item.name=newVal;
 	});
-	item._htmlInputName.title='Horse name';
+	item._htmlInputName.title='马的名字';
 	item._htmlInputName.maxLength=9;
 
 	item._htmlSelectMane=select('horse-mane-'+item.index, Horse.MANES, function(){
 		item.mane=this.value;
 	}, item.mane);
-	item._htmlSelectMane.title='Mane';
+	item._htmlSelectMane.title='鬃毛';
 
 	item._htmlSelectSaddles=select('horse-saddles-'+item.index, Horse.SADDLES, function(){
 		item.saddles=this.value;
 	}, item.saddles);
-	item._htmlSelectSaddles.title='Saddles';
+	item._htmlSelectSaddles.title='马鞍';
 
 	item._htmlSelectReins=select('horse-reins-'+item.index, Horse.REINS, function(){
 		item.reins=this.value;
 	}, item.reins);
-	item._htmlSelectReins.title='Reins';
+	item._htmlSelectReins.title='缰绳';
 
 	item._htmlInputBond=inputFloat('bond-'+item.category+'-'+item.index,0,100,item.bond*100);
 	item._htmlInputBond.addEventListener('change', function(){
 		item.bond=parseFloat(this.value) / 100;
 	});
-	item._htmlInputBond.title='Bond';
+	item._htmlInputBond.title='友好度';
 
 
 	var stats=[
@@ -158,25 +158,25 @@ Horse.buildHtmlElements=function(item){
 		{value:3, name:'★★★'},
 		{value:4, name:'★★★★'},
 		{value:5, name:'★★★★★'},
-		{value:0, name:'Infinite'}
+		{value:0, name:'无限'}
 	];
 	item._htmlInputStatsStrength=inputNumber('horse-stats-strength-'+item.index,100,350,item.statsStrength);
 	item._htmlInputStatsStrength.addEventListener('change', function(){
 		item.statsStrength=parseInt(this.value);
 	});
-	item._htmlInputStatsStrength.title='Stats: Strength';
+	item._htmlInputStatsStrength.title='状态: 健壮度';
 	item._htmlSelectStatsSpeed=select('horse-stats-speed-'+item.index, stats, function(){
 		item.statsSpeed=parseInt(this.value);
 	}, item.statsSpeed);
-	item._htmlSelectStatsSpeed.title='Stats: Speed';
+	item._htmlSelectStatsSpeed.title='状态: 速度';
 	item._htmlSelectStatsStamina=select('horse-stats-stamina-'+item.index, statsStamina, function(){
 		item.statsStamina=parseInt(this.value);
 	}, item.statsStamina);
-	item._htmlSelectStatsStamina.title='Stats: Stamina';
+	item._htmlSelectStatsStamina.title='状态: 精力';
 	item._htmlSelectStatsPull=select('horse-stats-pull-'+item.index, stats, function(){
 		item.statsPull=parseInt(this.value);
 	}, item.statsPull);
-	item._htmlSelectStatsPull.title='Stats: Pull';
+	item._htmlSelectStatsPull.title='状态: 挽力';
 
 
 
@@ -184,12 +184,12 @@ Horse.buildHtmlElements=function(item){
 	item._htmlSelectIconPattern=select('horse-icon-pattern-'+item.index, Horse.ICON_PATTERNS, function(){
 		item.iconPattern=parseInt(this.value);
 	}, item.iconPattern);
-	item._htmlSelectIconPattern.title='Icon pattern';
+	item._htmlSelectIconPattern.title='头像类型';
 
 	item._htmlSelectIconEyeColor=select('horse-icon-eye-color-'+item.index, Horse.ICON_EYE_COLORS, function(){
 		item.iconEyeColor=parseInt(this.value);
 	}, item.iconEyeColor);
-	item._htmlSelectIconEyeColor.title='Icon eye color';
+	item._htmlSelectIconEyeColor.title='头像眼睛颜色';
 }
 
 Horse.readAll=function(){
@@ -219,47 +219,47 @@ Horse.readAll=function(){
 }
 
 Horse.TRANSLATIONS={
-	'GameRomHorse00':'Horse 00',
-	'GameRomHorse01':'Horse 01',
-	'GameRomHorse02':'Horse 02',
-	'GameRomHorse03':'Horse 03',
-	'GameRomHorse04':'Horse 04',
-	'GameRomHorse05':'Horse 05',
-	'GameRomHorse06':'Horse 06',
-	'GameRomHorse07':'Horse 07',
-	'GameRomHorse08':'Horse 08',
-	'GameRomHorse09':'Horse 09',
-	'GameRomHorse10':'Horse 10',
-	'GameRomHorse11':'Horse 11',
-	'GameRomHorse12':'Horse 12',
-	'GameRomHorse13':'Horse 13',
-	'GameRomHorse14':'Horse 14',
-	'GameRomHorse15':'Horse 15',
-	'GameRomHorse16':'Horse 16',
-	'GameRomHorse17':'Horse 17',
-	'GameRomHorse18':'Horse 18',
-	'GameRomHorse19':'Horse 19',
-	'GameRomHorse20':'Horse 20',
-	'GameRomHorse21':'Horse 21',
-	'GameRomHorse22':'Horse 22',
-	'GameRomHorse23':'Horse 23',
-	'GameRomHorse25':'Horse 25',
-	'GameRomHorse26':'Horse 26',
-	'GameRomHorseEpona':'Epona (amiibo)',
-	'GameRomHorseZelda':'Royal White Stallion',
-	'GameRomHorse00L':'Giant Black Stallion',
-	'GameRomHorse01L':'Giant White Stallion',
-	'GameRomHorseGold':'Golden',
-	'GameRomHorseSpPattern':'Spot',
+	'GameRomHorse00':'马 00',
+	'GameRomHorse01':'马 01',
+	'GameRomHorse02':'马 02',
+	'GameRomHorse03':'马 03',
+	'GameRomHorse04':'马 04',
+	'GameRomHorse05':'马 05',
+	'GameRomHorse06':'马 06',
+	'GameRomHorse07':'马 07',
+	'GameRomHorse08':'马 08',
+	'GameRomHorse09':'马 09',
+	'GameRomHorse10':'马 10',
+	'GameRomHorse11':'马 11',
+	'GameRomHorse12':'马 12',
+	'GameRomHorse13':'马 13',
+	'GameRomHorse14':'马 14',
+	'GameRomHorse15':'马 15',
+	'GameRomHorse16':'马 16',
+	'GameRomHorse17':'马 17',
+	'GameRomHorse18':'马 18',
+	'GameRomHorse19':'马 19',
+	'GameRomHorse20':'马 20',
+	'GameRomHorse21':'马 21',
+	'GameRomHorse22':'马 22',
+	'GameRomHorse23':'马 23',
+	'GameRomHorse25':'马 25',
+	'GameRomHorse26':'马 26',
+	'GameRomHorseEpona':'伊波娜 (amiibo)',
+	'GameRomHorseZelda':'白马',
+	'GameRomHorse00L':'巨马',
+	'GameRomHorse01L':'巨身白马',
+	'GameRomHorseGold':'金色马',
+	'GameRomHorseSpPattern':'斑点',
 
 	//untammable
 	//'GameRomHorse00S':'*Donkey',
-	'GameRomHorseBone':'*Stalhorse',
-	'GameRomHorseBone_AllDay':'*Stalhorse (daytime)',
-	'GameRomHorseForStreetVender':'*Merchant',
-	'GameRomHorseNushi':'*Lord of the Mountain',
-	'Animal_Bear_A':'*Bear A',
-	'Animal_Bear_B':'*Bear B'
+	'GameRomHorseBone':'*骷髅马',
+	'GameRomHorseBone_AllDay':'*骷髅马 (白天)',
+	'GameRomHorseForStreetVender':'*商人马',
+	'GameRomHorseNushi':'*萨托利',
+	'Animal_Bear_A':'*食蜂熊',
+	'Animal_Bear_B':'*帝灰熊'
 };
 
 
@@ -278,56 +278,56 @@ Horse.ICON_PATTERNS=[
 	{value:0xb8872476, name:'03'}, //03
 	{value:0xfdcaa775, name:'04'}, //04
 	{value:0xb28f2118, name:'05'}, //05
-	{value:0xe7fc193e, name:'06 (Special: Gold)'}, //06	
+	{value:0xe7fc193e, name:'06 (特殊: 金色)'}, //06	
 ];
 Horse.ICON_EYE_COLORS=[
-	{value:0x6cbc3cb4, name:'Black'},
-	{value:0xe2911aba, name:'Blue'}
+	{value:0x6cbc3cb4, name:'黑色'},
+	{value:0xe2911aba, name:'蓝色'}
 ];
 Horse.MANES=[
-	{value:0xb6eede09, name:'None'}, //None
-	{value:0xb93d9e3b, name:'Normal Mane'}, //Horse_Link_Mane
-	{value:0x3a84d601, name:'Mane 01'}, //Horse_Link_Mane_01
-	{value:0x0bffd92a, name:'Mane 02'}, //Horse_Link_Mane_02
-	{value:0xe8125091, name:'Mane 03'}, //Horse_Link_Mane_03
-	{value:0xfdb103b2, name:'Mane 04'}, //Horse_Link_Mane_04
-	{value:0x75677ada, name:'Mane 05'}, //Horse_Link_Mane_05
-	{value:0x9cbf81f2, name:'Mane 06'}, //Horse_Link_Mane_06
-	{value:0x8140f2f9, name:'Mane 07'}, //Horse_Link_Mane_07
-	{value:0xd749201c, name:'Mane 08'}, //Horse_Link_Mane_08
-	{value:0xac2a896d, name:'Mane 09'}, //Horse_Link_Mane_09
-	{value:0x87d9391f, name:'Mane 10'}, //Horse_Link_Mane_10
-	{value:0xd6a61738, name:'Mane 11'}, //Horse_Link_Mane_11
-	{value:0x12dd95d6, name:'Mane 12'}, //Horse_Link_Mane_12
-	{value:0x9cd4f27b, name:'Giant black mane'}, //Horse_Link_Mane_00L
-	{value:0x55365b10, name:'Giant white mane'}, //Horse_Link_Mane_01L
-	{value:0xbad4c4a9, name:'*Donkey mane'} //Horse_Link_Mane_00S
+	{value:0xb6eede09, name:'无'}, //None
+	{value:0xb93d9e3b, name:'普通鬃毛'}, //Horse_Link_Mane
+	{value:0x3a84d601, name:'长鬃毛'}, //Horse_Link_Mane_01
+	{value:0x0bffd92a, name:'莫西干式鬃毛'}, //Horse_Link_Mane_02
+	{value:0xe8125091, name:'八股辫鬃毛'}, //Horse_Link_Mane_03
+	{value:0xfdb103b2, name:'三股辫鬃毛'}, //Horse_Link_Mane_04
+	{value:0x75677ada, name:'红色长鬃毛'}, //Horse_Link_Mane_05
+	{value:0x9cbf81f2, name:'蓝色长鬃毛'}, //Horse_Link_Mane_06
+	{value:0x8140f2f9, name:'绿色长鬃毛'}, //Horse_Link_Mane_07
+	{value:0xd749201c, name:'紫色长鬃毛'}, //Horse_Link_Mane_08
+	{value:0xac2a896d, name:'簪花鬃毛'}, //Horse_Link_Mane_09
+	{value:0x87d9391f, name:'鬃毛 10'}, //Horse_Link_Mane_10
+	{value:0xd6a61738, name:'鬃毛 11'}, //Horse_Link_Mane_11
+	{value:0x12dd95d6, name:'鬃毛 12'}, //Horse_Link_Mane_12
+	{value:0x9cd4f27b, name:'巨马黑鬃毛'}, //Horse_Link_Mane_00L
+	{value:0x55365b10, name:'巨马白鬃毛'}, //Horse_Link_Mane_01L
+	{value:0xbad4c4a9, name:'*驴鬃毛'} //Horse_Link_Mane_00S
 ];
 Horse.SADDLES=[
 	//{value:0xb6eede09, name:'None'}, //None
-	{value:0x8573ae34, name:'Stable Saddle'}, //GameRomHorseSaddle_00
-	{value:0x04c6c17b, name:'Traveler\'s Saddle'}, //GameRomHorseSaddle_01
-	{value:0x47d0c84e, name:'Royal Saddle'}, //GameRomHorseSaddle_02
-	{value:0xaeab565a, name:'Knight\'s Saddle'}, //GameRomHorseSaddle_03
-	{value:0xcf167805, name:'Monster Saddle'}, //GameRomHorseSaddle_04
-	{value:0x6e2db559, name:'Extravagant Saddle'}, //GameRomHorseSaddle_05
-	{value:0xb926ed8b, name:'Towing Harness'}, //GameRomHorseSaddle_07
-	{value:0xf1435392, name:'Giant Saddle'}, //GameRomHorseSaddle_00L
-	{value:0x7feaa5c0, name:'*Saddle 06'}, //GameRomHorseSaddle_06
-	{value:0x8c5bd272, name:'*Donkey Saddle'} //GameRomHorseSaddle_00S
+	{value:0x8573ae34, name:'驿站协会马鞍'}, //GameRomHorseSaddle_00
+	{value:0x04c6c17b, name:'旅人马鞍'}, //GameRomHorseSaddle_01
+	{value:0x47d0c84e, name:'王族马鞍'}, //GameRomHorseSaddle_02
+	{value:0xaeab565a, name:'骑士马鞍'}, //GameRomHorseSaddle_03
+	{value:0xcf167805, name:'怪物马鞍'}, //GameRomHorseSaddle_04
+	{value:0x6e2db559, name:'奢华马鞍'}, //GameRomHorseSaddle_05
+	{value:0xb926ed8b, name:'牵引挽具'}, //GameRomHorseSaddle_07
+	{value:0xf1435392, name:'巨马马鞍'}, //GameRomHorseSaddle_00L
+	{value:0x7feaa5c0, name:'*马鞍 06'}, //GameRomHorseSaddle_06
+	{value:0x8c5bd272, name:'*驴马鞍'} //GameRomHorseSaddle_00S
 	//{value:0xdeadbeef, name:'*Saddle 07_ExternalCoupler'}, //GameRomHorseSaddle_07_ExternalCoupler
 	//{value:0xdeadbeef, name:'*Towing Harness (+ wagon)'}, //GameRomHorseSaddle_07_WithWagon
 	//{value:0xdeadbeef, name:'*Saddle 00S_AncientAssistant'} //GameRomHorseSaddle_00S_AncientAssistant
 ];
 Horse.REINS=[
 	//{value:0xb6eede09, name:'None'}, //None
-	{value:0x1864234b, name:'Stable Bridle'}, //GameRomHorseReins_00
-	{value:0x094f807a, name:'Traveler\'s Bridle'}, //GameRomHorseReins_01
-	{value:0xe54abe55, name:'Royal Reins'}, //GameRomHorseReins_02
-	{value:0x0200441d, name:'Knight\'s Bridle'}, //GameRomHorseReins_03
-	{value:0x85610de7, name:'Monster Bridle'}, //GameRomHorseReins_04
-	{value:0xbdc6a58b, name:'Extravagant Bridle'}, //GameRomHorseReins_05
-	{value:0x4dbf2061, name:'Giant Bridle'}, //GameRomHorseReins_00L
-	{value:0x79c2c72f, name:'*Bridle 06'}, //GameRomHorseReins_06
-	{value:0xe8fe6ab7, name:'*Donkey Bridle'} //GameRomHorseReins_00S
+	{value:0x1864234b, name:'驿站协会缰绳'}, //GameRomHorseReins_00
+	{value:0x094f807a, name:'旅人缰绳'}, //GameRomHorseReins_01
+	{value:0xe54abe55, name:'王族缰绳'}, //GameRomHorseReins_02
+	{value:0x0200441d, name:'骑士缰绳'}, //GameRomHorseReins_03
+	{value:0x85610de7, name:'怪物缰绳'}, //GameRomHorseReins_04
+	{value:0xbdc6a58b, name:'奢华缰绳'}, //GameRomHorseReins_05
+	{value:0x4dbf2061, name:'巨马缰绳'}, //GameRomHorseReins_00L
+	{value:0x79c2c72f, name:'*缰绳 06'}, //GameRomHorseReins_06
+	{value:0xe8fe6ab7, name:'*驴缰绳'} //GameRomHorseReins_00S
 ];

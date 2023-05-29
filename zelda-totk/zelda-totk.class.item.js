@@ -64,7 +64,7 @@ Item.buildHtmlElements=function(item){
 		if(!isNaN(newVal) && newVal>0)
 			item.quantity=newVal;
 	});
-	item._htmlInputQuantity.title='Quantity';
+	item._htmlInputQuantity.title='数量';
 
 
 	if(item.category==='food'){
@@ -79,7 +79,7 @@ Item.buildHtmlElements=function(item){
 			if(!isNaN(newVal) && newVal>0)
 				item.foodEffectHearts=newVal;
 		});
-		item._htmlInputFoodEffectHearts.title='Heart quarters heal';
+		item._htmlInputFoodEffectHearts.title='心心治疗数的1/4';
 
 		item._htmlInputFoodEffectMultiplier=inputNumber('item-food-effects-multiplier-'+item.category+'-'+item.index, 1, 250, item.foodEffectMultiplier);
 		item._htmlInputFoodEffectMultiplier.addEventListener('change', function(){
@@ -87,7 +87,7 @@ Item.buildHtmlElements=function(item){
 			if(!isNaN(newVal) && newVal>0)
 				item.foodEffectMultiplier=newVal;
 		});
-		item._htmlInputFoodEffectMultiplier.title='Multiplier';
+		item._htmlInputFoodEffectMultiplier.title='倍率';
 
 		item._htmlInputFoodEffectTime=inputNumber('item-food-effects-time-'+item.category+'-'+item.index, 0, 59999, item.foodEffectTime);
 		item._htmlInputFoodEffectTime.addEventListener('change', function(){
@@ -95,10 +95,10 @@ Item.buildHtmlElements=function(item){
 			if(!isNaN(newVal) && newVal>=0)
 				item.foodEffectTime=newVal;
 		});
-		item._htmlInputFoodEffectTime.title='Duration (in seconds)';
+		item._htmlInputFoodEffectTime.title='持续时间 (单位：秒)';
 
 		item._htmlSpanFoodEffectUnknownValue=span(item.foodEffectUnknown1);
-		item._htmlSpanFoodEffectUnknownValue.title='Unknown value';
+		item._htmlSpanFoodEffectUnknownValue.title='未知数值';
 	}
 }
 
@@ -141,35 +141,35 @@ MinusRupee_00:99999 //Poe
 
 
 Item.FOOD_EFFECTS=[
-{name:'None', value:0xb6eede09}, //None
-{name:'Heat Resistance', value:0x1df7a011}, //ResistHot
-{name:'Flame Guard', value:0x11383afd}, //ResistBurn
-{name:'Cold Resistance', value:0x9b6d98fb}, //ResistCold
-{name:'Shock Resistance', value:0x183cd822}, //ResistElectric
-{name:'Lightning Proof', value:0x25293142}, //ResitLightning
-{name:'UnFreezable', value:0xf5e2a20c}, //ResistFreeze
+{name:'无', value:0xb6eede09}, //None
+{name:'耐热防护', value:0x1df7a011}, //ResistHot
+{name:'火焰防护', value:0x11383afd}, //ResistBurn
+{name:'耐寒防护', value:0x9b6d98fb}, //ResistCold
+{name:'电麻防护', value:0x183cd822}, //ResistElectric
+{name:'雷无效', value:0x25293142}, //ResitLightning
+{name:'冻结无效', value:0xf5e2a20c}, //ResistFreeze
 //{name:'*ResistAncient', value:0xe53962df},
-{name:'Swim Speed Up', value:0x67866c6d}, //SwimSpeedUp
-{name:'Swim Dash Stamina Up', value:0x87645022}, //DecreaseSwimStamina
+{name:'游泳速度提升', value:0x67866c6d}, //SwimSpeedUp
+{name:'加速游泳精力持久', value:0x87645022}, //DecreaseSwimStamina
 //{name:'*SpinAttack', value:0x1e082215},
 //{name:'*ClimbWaterfall', value:0x9119b797},
-{name:'Climb Speed Up', value:0xdc7faf6e}, //ClimbSpeedUp
+{name:'攀登速度提升', value:0xdc7faf6e}, //ClimbSpeedUp
 //{name:'*ClimbSpeedUpOnlyHorizontaly', value:0x81e9dab0},
-{name:'Attack Up', value:0xa9384c6c}, //AttackUp
-{name:'Cold Weather Attack Up', value:0x4a3e58f6}, //AttackUpCold
-{name:'Hot Weather Attack Up', value:0x4c6a85d2}, //AttackUpHot
-{name:'Stormy Weather Attack Up', value:0xff347a38}, //AttackUpThunderstorm
+{name:'攻击力提升', value:0xa9384c6c}, //AttackUp
+{name:'低温时冷气攻击', value:0x4a3e58f6}, //AttackUpCold
+{name:'高温时火焰攻击', value:0x4c6a85d2}, //AttackUpHot
+{name:'雷雨时电流攻击', value:0xff347a38}, //AttackUpThunderstorm
 //{name:'*AttackUpDark', value:0xa2d97a77},
 //{name:'*AttackUpBone', value:0x51f5ed93},
-{name:'Stealth Up', value:0x74141898}, //QuietnessUp
-{name:'Sand Speed Up', value:0x9add92a3}, //SandMoveUp
-{name:'Snow Speed Up', value:0x33261e44}, //SnowMoveUp
+{name:'安静性提升', value:0x74141898}, //QuietnessUp
+{name:'沙上速度提升', value:0x9add92a3}, //SandMoveUp
+{name:'雪上速度提升', value:0x33261e44}, //SnowMoveUp
 //{name:'*WakeWind', value:0x29e7073a},
 //{name:'*TwiceJump', value:0xca81b8ab},
 //{name:'*EmergencyAvoid', value:0x8674a913},
-{name:'Defense Up', value:0xa0a00c0e}, //DefenseUp
-{name:'Speed Up', value:0xb3f6b87a}, //AllSpeed
-{name:'Gloom Resistance', value:0x4d1e8af4}, //MiasmaGuard
+{name:'防御提升', value:0xa0a00c0e}, //DefenseUp
+{name:'移动力提升', value:0xb3f6b87a}, //AllSpeed
+{name:'瘴气防护', value:0x4d1e8af4}, //MiasmaGuard
 //{name:'*MaskBokoblin', value:0x6b9c735f},
 //{name:'*MaskMoriblin', value:0xcd1c7892},
 //{name:'*MaskLizalfos', value:0x18c0a6f1},
@@ -177,36 +177,36 @@ Item.FOOD_EFFECTS=[
 //{name:'*YigaDisguise', value:0x2c403cd2},
 //{name:'*StalDisguise', value:0x4d91c91b},
 //{name:'*LifeRecover', value:0x515632a9},
-{name:'Extra Heart', value:0xc1db0965}, //LifeMaxUp
-{name:'Stamina Recovery', value:0xe9a30056}, //StaminaRecover
-{name:'Extra Stamina', value:0x60d8315d}, //ExStaminaMaxUp
-{name:'Gloom Recovery', value:0x03459853}, //LifeRepair
-{name:'Skydive Mobility Up', value:0x6775f470}, //DivingMobilityUp
-{name:'Slip Resistance', value:0x2b0cb1e9}, //NotSlippy
+{name:'MAX心心', value:0xc1db0965}, //LifeMaxUp
+{name:'回复精力', value:0xe9a30056}, //StaminaRecover
+{name:'MAX精力', value:0x60d8315d}, //ExStaminaMaxUp
+{name:'瘴气伤害回复', value:0x03459853}, //LifeRepair
+{name:'俯冲机动力提升', value:0x6775f470}, //DivingMobilityUp
+{name:'滑落减轻', value:0x2b0cb1e9}, //NotSlippy
 //{name:'*Moisturizing', value:0x994b605e},
-{name:'Glow', value:0x4939dca1}, //LightEmission
-{name:'Rupee Padding', value:0xcfd032db}, //RupeeGuard
+{name:'发光', value:0x4939dca1}, //LightEmission
+{name:'伤害卢比交换', value:0xcfd032db}, //RupeeGuard
 //{name:'*FallResist', value:0x8b6e916c},
-{name:'Master Sword Beam Up', value:0x59be2cc3}, //SwordBeamUp
+{name:'大师之剑剑气强化', value:0x59be2cc3}, //SwordBeamUp
 //{name:'*VisualizeLife', value:0x5d85e03c},
-{name:'Night Speed Up', value:0x82638f9d}, //NightMoveSpeedUp
+{name:'夜间移动速度提升', value:0x82638f9d}, //NightMoveSpeedUp
 //{name:'*NightGlow', value:0x7d5014ab},
-{name:'Climbing Jump Stamina Up', value:0x0d1d9ef3}, //DecreaseWallJumpStamina
-{name:' Charge Atk. Stamina Up', value:0x48aa5ddf}, //DecreaseChargeAttackStamina
+{name:'攀登跳跃精力持久', value:0x0d1d9ef3}, //DecreaseWallJumpStamina
+{name:'蓄力攻击精力持久', value:0x48aa5ddf}, //DecreaseChargeAttackStamina
 //{name:'*EmitTerror', value:0xe6202c76},
-{name:'Fireproof', value:0x2f3b7069}, //NoBurning
-{name:'Impact Proof', value:0xc5def427}, //NoFallDamage
-{name:'Slip Proof', value:0x346a7abc}, //NoSlip
+{name:'火焰无效', value:0x2f3b7069}, //NoBurning
+{name:'落下伤害无效', value:0xc5def427}, //NoFallDamage
+{name:'滑落无效', value:0x346a7abc}, //NoSlip
 //{name:'*RupeeGuardRate', value:0x56b27b1f},
 //{name:'*MaskAll', value:0xc03cbd09},
-{name:'Energy Up', value:0xa3b0355e}, //DecreaseZonauEnergy
-{name:'Energy Recharge Up', value:0x52fad704}, //ZonauEnergyHealUp
+{name:'能源持久', value:0xa3b0355e}, //DecreaseZonauEnergy
+{name:'能源回复速度提升', value:0x52fad704}, //ZonauEnergyHealUp
 //{name:'*MaskHorablin', value:0x719be063},
-{name:'Gloom Attack Resist', value:0x671dbe0d}, //MiasmaDefenseUp
-{name:'Cold Weather Charge', value:0xf563b129}, //ChargePowerUpCold
-{name:'Hot Weather Charge', value:0x4fb7ed09}, //ChargePowerUpHot
-{name:'Stormy Weather Charge', value:0x8f4fdaf4}, //ChargePowerUpThunderstorm
-{name:'Shining Steps', value:0x1d249847} //LightFootprint
+{name:'瘴气防护提升', value:0x671dbe0d}, //MiasmaDefenseUp
+{name:'低温时蓄力攻击强化', value:0xf563b129}, //ChargePowerUpCold
+{name:'高温时蓄力攻击强化', value:0x4fb7ed09}, //ChargePowerUpHot
+{name:'雷雨时蓄力攻击强化', value:0x8f4fdaf4}, //ChargePowerUpThunderstorm
+{name:'光之足迹', value:0x1d249847} //LightFootprint
 //{name:'*SoulPowerUpLightning', value:0xfbfc055b},
 //{name:'*SoulPowerUpWater', value:0x77b8c024},
 //{name:'*SoulPowerUpWind', value:0xc4cf428c},
@@ -235,7 +235,7 @@ Item.fixKeyAvailabilityFlags=function(){
 
 	if(changes){
 		//console.warn(changes+' paraglider fabric availability flags have been fixed');
-		MarcDialogs.alert(changes+' paraglider fabric availability flags have been fixed');
+		MarcDialogs.alert(changes+'个滑翔伞面料可用性标志已修复');
 		if(currentTab==='master' && TOTKMasterEditor.isLoaded()){
 			TOTKMasterEditor.refreshResults();
 		}

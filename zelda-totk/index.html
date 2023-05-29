@@ -60,8 +60,8 @@
 				<button id="tab-button-horses" title="马匹" class="tab-button" onclick="showTab('horses')"><i class="tab-icon horses"></i></button>
 				<button id="tab-button-master" title="编辑大师" class="tab-button" onclick="showTab('master')"><i class="tab-icon master"></i></button>
 				<!-- <button id="tab-button-help" title="Help" class="tab-button" onclick="showTab('help')"><i class="tab-icon help"></i></button> -->
-				| <button class="button with-icon icon3" onclick="closeFile()">Close file</button>
-				<button class="button colored blue with-icon icon9" onclick="saveChanges()">Save changes</button>
+				| <button class="button with-icon icon3" onclick="closeFile()">关闭文件</button>
+				<button class="button colored blue with-icon icon9" onclick="saveChanges()">保存更改</button>
 			</div>
 		</div>
 	</div>
@@ -248,9 +248,9 @@
 		</div>
 	
 		<!-- Coordinates -->
-		<h3 class="border-green">Coordinates</h3>
+		<h3 class="border-green">坐标</h3>
 		<div class="row">
-			<div class="six columns"><label for="float-pos-x">Current Link coordinates (XYZ)</label></div>
+			<div class="six columns"><label for="float-pos-x">当前林克坐标(XYZ)</label></div>
 			<div class="two columns"><input id="float-pos-x" class="full-width" type="text" /></div>
 			<div class="two columns"><input id="float-pos-y" class="full-width" type="text" /></div>
 			<div class="two columns"><input id="float-pos-z" class="full-width" type="text" /></div>
@@ -267,19 +267,19 @@
 
 
 		<!-- COMPLETIONISM -->
-		<h3 class="border-blue">Completionism</h3>
+		<h3 class="border-blue">完成度</h3>
 		<div class="row mb-10">
-			<div class="four columns">Map pins <span id="span-pin-counter"></span></div>
+			<div class="four columns">地图钉 <span id="span-pin-counter"></span></div>
 			<div class="eight columns text-right">
-				<button onclick="SavegameEditor.clearAllMapPins()">Remove all map pins</button>
+				<button onclick="SavegameEditor.clearAllMapPins()">移除所有地图钉</button>
 			</div>
 		</div>
 		<div class="row mb-10">
-			<div class="four columns"><label for="number-koroks">Pin korok locations to map</label></div>
+			<div class="four columns"><label for="number-koroks">在地图上标记克洛格位置</label></div>
 			<div class="eight columns text-right">
-				<button onclick="SavegameEditor.addKorokPins(0, 299)">Koroks #001-#300</button>
-				<button onclick="SavegameEditor.addKorokPins(300, 599)">Koroks #301-#600</button>
-				<button onclick="SavegameEditor.addKorokPins(600, 899)">Koroks #601-#900</button>
+				<button onclick="SavegameEditor.addKorokPins(0, 299)">克洛格 #001-#300</button>
+				<button onclick="SavegameEditor.addKorokPins(300, 599)">克洛格 #301-#600</button>
+				<button onclick="SavegameEditor.addKorokPins(600, 899)">克洛格 #601-#900</button>
 			</div>
 		</div>
 
@@ -308,24 +308,24 @@
 			</div>
 		</div> -->
 		<div class="row mb-10">
-			<div class="four columns">Hyrule Compendium <span id="span-compendium-counter"></span></div>
+			<div class="four columns">海拉鲁图鉴 <span id="span-compendium-counter"></span></div>
 			<div class="eight columns text-right">
-				<button onclick="Compendium.setToStock(false)">Set current to stock</button>
-				<button onclick="Compendium.setToStock(true)">Unlock missing</button>
+				<button onclick="Compendium.setToStock(false)">恢复默认图片</button>
+				<button onclick="Compendium.setToStock(true)">解锁所有</button>
 			</div>
 		</div>
 		<div class="row mb-10">
-			<div class="four columns">Shrines - Found: <span id="span-shrines-found-counter"></span> - Cleared: <span id="span-shrines-clear-counter"></span></div>
+			<div class="four columns">神庙 - 已发现: <span id="span-shrines-found-counter"></span> - 已完成: <span id="span-shrines-clear-counter"></span></div>
 			<div class="eight columns text-right">
-				<button onclick="Shrine.setAllAsFound()">Set all shrines as found</button>
-				<button onclick="Shrine.setAllAsClear()">Set all shrines as cleared</button>
+				<button onclick="Shrine.setAllAsFound()">设置所有神庙已发现</button>
+				<button onclick="Shrine.setAllAsClear()">设置所有神庙已完成</button>
 			</div>
 		</div>
 		<div class="row mb-10">
-			<div class="four columns">Lightroots - Found: <span id="span-lightroots-found-counter"></span> - Cleared: <span id="span-lightroots-clear-counter"></span></div>
+			<div class="four columns">破魔之根 - 已发现: <span id="span-lightroots-found-counter"></span> - 已激活: <span id="span-lightroots-clear-counter"></span></div>
 			<div class="eight columns text-right">
-				<button onclick="Lightroot.setAllAsFound()">Set all lightroots as found</button>
-				<button onclick="Lightroot.setAllAsClear()">Set all lightroots as activated</button>
+				<button onclick="Lightroot.setAllAsFound()">设置所有破魔之根已发现</button>
+				<button onclick="Lightroot.setAllAsClear()">设置所有破魔之根已激活</button>
 			</div>
 		</div>
 

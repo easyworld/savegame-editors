@@ -75,7 +75,7 @@ Equipment.buildHtmlElements=function(item){
 		if(!isNaN(newVal) && newVal>0)
 			item.durability=newVal;
 	});
-	item._htmlInputDurability.title='Durability';
+	item._htmlInputDurability.title='耐久值';
 	item._htmlInputDurability.maxValue=item.getMaximumDurability();
 	item._htmlInputDurability.value=item.durability;
 
@@ -113,7 +113,7 @@ Equipment.buildHtmlElements=function(item){
 		Equipment.MODIFIER_BLOCK2
 	].indexOf(item.modifier)===-1;
 	if(unknownModifier){
-		modifiers.push({name:'Unknown: '+item.modifier.toString(16), value:item.modifier});
+		modifiers.push({name:'未知: '+item.modifier.toString(16), value:item.modifier});
 	}
 	item._htmlSelectModifier=select('item-modifier-'+item.category+'-'+item.index, modifiers, function(){
 		var fromNoBonus=item.modifier===Equipment.MODIFIER_NO_BONUS;
@@ -135,7 +135,7 @@ Equipment.buildHtmlElements=function(item){
 			item.restoreDurability();
 		}
 	}, item.modifier);
-	item._htmlSelectModifier.title='Modifier';
+	item._htmlSelectModifier.title='修改的类型';
 	item._htmlSelectModifier.disabled=unknownModifier;
 
 	//build html elements
@@ -149,14 +149,14 @@ Equipment.buildHtmlElements=function(item){
 			}
 		}
 	});
-	item._htmlInputModifierValue.title='Modifier value';
+	item._htmlInputModifierValue.title='修改的值';
 
 	//build html elements
 	if(item.isFusable()){
 		item._htmlSelectFusion=select('item-fusion-'+item.category+'-'+item.index, Equipment.FUSABLE_ITEMS, function(){
 			item.fuseId=this.value;
 		}, item.fuseId);
-		item._htmlSelectFusion.title='Fusion';
+		item._htmlSelectFusion.title='余料建造';
 	}
 }
 
@@ -574,16 +574,16 @@ Weapon_Shield_107:'残旧的木盾'
 };
 
 Equipment.FUSABLE_ITEMS=[
-{value:'',name:'No fusion'},
-{value:'AsbObj_RockParts_C_S_01',name:'Environment: AsbObj_RockParts_C_S_01'},
-{value:'AsbObj_SharpRock_A_S_01',name:'Environment: AsbObj_SharpRock_A_S_01'},
-{value:'AsbObj_WhiteWoodRectangle_A_LL_01',name:'Environment: AsbObj_WhiteWoodRectangle_A_LL_01'},
-{value:'Barrel_SkyObj',name:'Environment: Barrel_SkyObj'},
-{value:'DgnObj_BoardIron_E',name:'Environment: DgnObj_BoardIron_E'},
-{value:'DgnObj_SpikeBall_A',name:'Environment: DgnObj_SpikeBall_A'},
-{value:'DgnObj_SpikeBallWood_A',name:'Environment: DgnObj_SpikeBallWood_A'},
-{value:'IceWall_Piece',name:'Environment: IceWall_Piece'},
-{value:'Obj_GerudoHoleCover_A_03',name:'Environment: Obj_GerudoHoleCover_A_03'},
-{value:'Obj_LiftRockWhite_A_01',name:'Environment: Obj_LiftRockWhite_A_01'},
-{value:'Obj_SpikeBall_B',name:'Environment: Obj_SpikeBall_B'}
+{value:'',name:'无余料建造'},
+{value:'AsbObj_RockParts_C_S_01',name:'环境物品: AsbObj_RockParts_C_S_01'},
+{value:'AsbObj_SharpRock_A_S_01',name:'环境物品: AsbObj_SharpRock_A_S_01'},
+{value:'AsbObj_WhiteWoodRectangle_A_LL_01',name:'环境物品: AsbObj_WhiteWoodRectangle_A_LL_01'},
+{value:'Barrel_SkyObj',name:'环境物品: Barrel_SkyObj'},
+{value:'DgnObj_BoardIron_E',name:'环境物品: DgnObj_BoardIron_E'},
+{value:'DgnObj_SpikeBall_A',name:'环境物品: DgnObj_SpikeBall_A'},
+{value:'DgnObj_SpikeBallWood_A',name:'环境物品: DgnObj_SpikeBallWood_A'},
+{value:'IceWall_Piece',name:'环境物品: IceWall_Piece'},
+{value:'Obj_GerudoHoleCover_A_03',name:'环境物品: Obj_GerudoHoleCover_A_03'},
+{value:'Obj_LiftRockWhite_A_01',name:'环境物品: Obj_LiftRockWhite_A_01'},
+{value:'Obj_SpikeBall_B',name:'环境物品: Obj_SpikeBall_B'}
 ];

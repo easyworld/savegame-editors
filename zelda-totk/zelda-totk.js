@@ -530,7 +530,7 @@ SavegameEditor={
 		}
 
 		this.refreshMapPinsCounter();
-		MarcDialogs.alert(count+' map pins added');
+		MarcDialogs.alert(count+'个地图钉已添加');
 		return count;
 	},
 	clearAllMapPins:function(){
@@ -541,7 +541,7 @@ SavegameEditor={
 		}
 
 		this.refreshMapPinsCounter();
-		MarcDialogs.alert(count+' map pins removed');
+		MarcDialogs.alert(count+'个地图钉已移除');
 		return count;
 	},
 
@@ -623,16 +623,16 @@ SavegameEditor={
 		/* prepare fusable items list */
 		for(var itemId in Equipment.TRANSLATIONS.weapons){
 			if(!/^Weapon_Sword_07/.test(itemId))
-				Equipment.FUSABLE_ITEMS.push({value:itemId, name:'Weapon: '+Equipment.TRANSLATIONS.weapons[itemId]})
+				Equipment.FUSABLE_ITEMS.push({value:itemId, name:'武器: '+Equipment.TRANSLATIONS.weapons[itemId]})
 		}
 		for(var itemId in Equipment.TRANSLATIONS.shields){
-			Equipment.FUSABLE_ITEMS.push({value:itemId, name:'Shield: '+Equipment.TRANSLATIONS.shields[itemId]})
+			Equipment.FUSABLE_ITEMS.push({value:itemId, name:'盾: '+Equipment.TRANSLATIONS.shields[itemId]})
 		}
 		for(var itemId in Item.TRANSLATIONS.materials){
-			Equipment.FUSABLE_ITEMS.push({value:itemId, name:'Material: '+Item.TRANSLATIONS.materials[itemId]})
+			Equipment.FUSABLE_ITEMS.push({value:itemId, name:'材料: '+Item.TRANSLATIONS.materials[itemId]})
 		}
 		for(var itemId in Item.TRANSLATIONS.devices){
-			Equipment.FUSABLE_ITEMS.push({value:itemId.replace('_Capsule',''), name:'Zonai: '+Item.TRANSLATIONS.devices[itemId]})
+			Equipment.FUSABLE_ITEMS.push({value:itemId.replace('_Capsule',''), name:'左纳乌: '+Item.TRANSLATIONS.devices[itemId]})
 		}
 
 		setNumericRange('rupees', 0, 999999);

@@ -40,28 +40,28 @@ Armor.prototype.save=function(){
 Armor.buildHtmlElements=function(item){
 	//build html elements
 	var dyeColors=[
-		{name:'Default color', value:Armor.DYE_NONE},
-		{name:'Blue', value:Armor.DYE_BLUE},
-		{name:'Red', value:Armor.DYE_RED},
-		{name:'Yellow', value:Armor.DYE_YELLOW},
-		{name:'White', value:Armor.DYE_WHITE},
-		{name:'Black', value:Armor.DYE_BLACK},
-		{name:'Purple', value:Armor.DYE_PURPLE},
-		{name:'Green', value:Armor.DYE_GREEN},
-		{name:'Light blue', value:Armor.DYE_LIGHT_BLUE},
-		{name:'Navy', value:Armor.DYE_NAVY},
-		{name:'Orange', value:Armor.DYE_ORANGE},
-		{name:'Pink', value:Armor.DYE_PINK},
-		{name:'Crimson', value:Armor.DYE_CRIMSON},
-		{name:'Light yellow', value:Armor.DYE_LIGHT_YELLOW},
-		{name:'Brown', value:Armor.DYE_BROWN},
-		{name:'Gray', value:Armor.DYE_GRAY}
+		{name:'原本的颜色', value:Armor.DYE_NONE},
+		{name:'蓝色', value:Armor.DYE_BLUE},
+		{name:'红色', value:Armor.DYE_RED},
+		{name:'黄色', value:Armor.DYE_YELLOW},
+		{name:'白色', value:Armor.DYE_WHITE},
+		{name:'黑色', value:Armor.DYE_BLACK},
+		{name:'紫色', value:Armor.DYE_PURPLE},
+		{name:'绿色', value:Armor.DYE_GREEN},
+		{name:'淡蓝色', value:Armor.DYE_LIGHT_BLUE},
+		{name:'深蓝色', value:Armor.DYE_NAVY},
+		{name:'橙色', value:Armor.DYE_ORANGE},
+		{name:'桃红色', value:Armor.DYE_PINK},
+		{name:'深红色', value:Armor.DYE_CRIMSON},
+		{name:'淡黄色', value:Armor.DYE_LIGHT_YELLOW},
+		{name:'茶色', value:Armor.DYE_BROWN},
+		{name:'灰色', value:Armor.DYE_GRAY}
 	];
 	item._htmlSelectDyeColor=select('armor-dye-'+item.category+'-'+item.index, dyeColors, function(){
 		item.dyeColor=parseInt(this.value);
 		item.refreshHtmlColor();
 	}, item.dyeColor);
-	item._htmlSelectDyeColor.title='Dye color';
+	item._htmlSelectDyeColor.title='染色';
 
 	item._htmlSpanColor=document.createElement('span');
 	item._htmlSpanColor.className='dye-color';

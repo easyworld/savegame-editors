@@ -13,7 +13,7 @@ var Shrine={
 			if(val===0 || val===1)
 				count+=val;
 			else
-				console.error('invalid shrine found value: '+val);
+				console.error('无效的神庙发现标记值: '+val);
 		}
 		return count;
 	},
@@ -27,7 +27,7 @@ var Shrine={
 				count++;
 			}
 		}
-		MarcDialogs.alert(count+' shrines set as found.');
+		MarcDialogs.alert(count+'个神庙被标记为已发现.');
 		SavegameEditor.refreshShrineCounters();
 		return count;
 	},
@@ -39,7 +39,7 @@ var Shrine={
 			if(val===0x62965740)
 				count++;
 			else if(val!==0x04a35d72 && val!==0x7698141c && val!==0x1818ec02 && val!==0x7e731eee)
-				console.error('invalid shrine clear value: '+val);
+				console.error('无效的神庙完成标记值: '+val);
 		}
 		return count;
 	},
@@ -54,7 +54,7 @@ var Shrine={
 			}
 		}
 		this.setAllAsFound();
-		MarcDialogs.alert(count+' shrines set as clear.');
+		MarcDialogs.alert(count+'个神庙被标记为已完成.');
 		SavegameEditor.refreshShrineCounters();
 		return count;
 	},
@@ -91,7 +91,7 @@ var Lightroot={
 			if(val===0 || val===1)
 				count+=val;
 			else
-				console.error('invalid light root found value: '+val);
+				console.error('无效的破魔之根发现标记值: '+val);
 		}
 		return count;
 	},
@@ -105,7 +105,7 @@ var Lightroot={
 				count++;
 			}
 		}
-		MarcDialogs.alert(count+' lightroots set as found.');
+		MarcDialogs.alert(count+'个破魔之根被标记为已发现.');
 		SavegameEditor.refreshLightrootCounters();
 		return count;
 	},
@@ -117,7 +117,7 @@ var Lightroot={
 			if(val===0x1818ec02)
 				count++;
 			else if(val!==0x8a88c430)
-				console.error('invalid lightroot clear value: '+val);
+				console.error('无效的破魔之根激活标记值: '+val);
 		}
 		return count;
 	},
@@ -132,7 +132,7 @@ var Lightroot={
 			}
 		}
 		this.setAllAsFound();
-		MarcDialogs.alert(count+' lightroots set as clear.');
+		MarcDialogs.alert(count+'个破魔之根被激活.');
 		SavegameEditor.refreshLightrootCounters();
 		return count;
 	},
