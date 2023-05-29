@@ -255,11 +255,11 @@ window.addEventListener('load', function(){
 	var warningDialog=document.createElement('div');
 	warningDialog.className='dialog';
 	warningDialog.id='dialog-warning';
-	warningDialog.innerHTML='Use this tool at your own risk. By using it, you are responsible of any data lost.';
+	warningDialog.innerHTML='请自行承担使用此工具的风险。使用它即表示您对任何数据丢失负责。';
 	var divButtons=document.createElement('div');
 	divButtons.className='buttons';
 	var understandButton=document.createElement('button');
-	understandButton.innerHTML='I understand';
+	understandButton.innerHTML='确认使用';
 	understandButton.addEventListener('click',function(){
 		var EXPIRE_DAYS=3;
 		var d=new Date();
