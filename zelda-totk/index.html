@@ -19,6 +19,7 @@
 	<script type="text/javascript" src="./zelda-totk.class.shrine.js"></script>
 	<script type="text/javascript" src="./zelda-totk.class.compendium.js"></script>
 	<script type="text/javascript" src="./zelda-totk.master.js"></script>
+	<!-- <script type="text/javascript" src="./murmurhash3js.min.js"></script> -->
 	<script type="text/javascript"><!--
 		/* service worker */
 		/*var FORCE_HTTPS=true;
@@ -317,6 +318,7 @@
 		<div class="row mb-10">
 			<div class="four columns">神庙 - 已发现: <span id="span-shrines-found-counter"></span> - 已完成: <span id="span-shrines-clear-counter"></span></div>
 			<div class="eight columns text-right">
+				<button onclick="SavegameEditor.addLocationPinsShrines()">在地图上标记未发现神庙</button>
 				<button onclick="Shrine.setAllAsFound()">设置所有神庙已发现</button>
 				<button onclick="Shrine.setAllAsClear()">设置所有神庙已完成</button>
 			</div>
@@ -324,6 +326,7 @@
 		<div class="row mb-10">
 			<div class="four columns">破魔之根 - 已发现: <span id="span-lightroots-found-counter"></span> - 已激活: <span id="span-lightroots-clear-counter"></span></div>
 			<div class="eight columns text-right">
+				<button onclick="SavegameEditor.addLocationPinsLightroots()">在地图上标记未发现破魔之根</button>
 				<button onclick="Lightroot.setAllAsFound()">设置所有破魔之根已发现</button>
 				<button onclick="Lightroot.setAllAsClear()">设置所有破魔之根已激活</button>
 			</div>
