@@ -344,7 +344,7 @@ SavegameEditor={
 			item._htmlDeleteButton=document.createElement('button');
 			item._htmlDeleteButton.className='button colored red with-icon icon3 floating';
 			item._htmlDeleteButton.addEventListener('click', function(){
-				MarcDialogs.confirm('Are you sure you want to delete <strong>'+item.getItemTranslation()+'</strong>?<br/><div style="color:red">Warning: use this feature at your own risk</div>', function(){
+				MarcDialogs.confirm('你确定你要删除 <strong>'+item.getItemTranslation()+'</strong>?<br/><div style="color:red">警告：使用此功能需要您自担风险</div>', function(){
 					MarcDialogs.close();
 					SavegameEditor._removeItem(item.category, item.index);
 				});
