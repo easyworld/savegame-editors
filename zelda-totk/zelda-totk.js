@@ -449,6 +449,17 @@ SavegameEditor={
 			var newItem;
 			if(catId==='materials' || catId==='food' || catId==='devices'){
 				newItem=new Item(catId, index++, id, 888);
+			} else if(catId==='armors') {
+				if (itemList[id].includes('(')) continue;
+				var has4Star;
+				if (itemList[id].endsWith('★'))
+					has4Star = Object.values(itemList).some(value => value.includes(itemList[id].replaceAll('★','')+'★★★★'));
+				else 
+					has4Star = Object.values(itemList).some(value => value.includes(itemList[id]+' ★★★★'));
+				if (has4Star && itemList[id].includes('★★★★') || !has4Star)
+					newItem=new Armor(index++, id);
+				else
+					continue; 
 			}
 			newItem.removable=true;
 			this.currentItems[catId].push(newItem);
