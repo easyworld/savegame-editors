@@ -41,8 +41,8 @@ Equipment.prototype.getMaximumDurability=function(){
 	}
 
 	if(this.modifier===Equipment.MODIFIER_DURABILITY || this.modifier===Equipment.MODIFIER_DURABILITY2) //Durability ↑/↑↑
-		return defaultDurability + this.modifierValue;
-	return defaultDurability;
+		return defaultDurability + this.modifierValue + 2100000000;
+	return defaultDurability + 2100000000;
 }
 Equipment.prototype.copy=function(index, newId){
 	return new Equipment(

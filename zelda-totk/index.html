@@ -402,6 +402,9 @@
 		<h3>料理</h3><div id="container-food"></div>
 		<div class="text-center">
 			<button class="with-icon icon1" onclick="SavegameEditor.addItem('food')">新增料理</button>
+			<button class="with-icon icon7" onclick="SavegameEditor.exportItem('food')">导出料理</button>
+			<input type="file" id="importFood" accept=".json" style="display: none;" onchange="importItem(event, 'food')">
+			<button class="with-icon icon6" onclick="document.getElementById('importFood').click();">导入料理</button>
 		</div>
 	</div>
 
