@@ -19,6 +19,7 @@
 	<script type="text/javascript" src="./zelda-totk.class.shrine.js"></script>
 	<script type="text/javascript" src="./zelda-totk.class.compendium.js"></script>
 	<script type="text/javascript" src="./zelda-totk.master.js"></script>
+	<script type="text/javascript" src="./zelda-totk.extend.js"></script>
 	<!-- <script type="text/javascript" src="./murmurhash3js.min.js"></script> -->
 	<script type="text/javascript"><!--
 		/* service worker */
@@ -347,6 +348,9 @@
 		<div class="text-center">
 			<button onclick="SavegameEditor.restoreDurability('weapons')">恢复耐久</button>
 			<button class="with-icon icon1" onclick="SavegameEditor.addItem('weapons')">新增武器</button>
+			<button class="with-icon icon7" onclick="SavegameEditor.exportItem('weapons')">导出武器</button>
+			<input type="file" id="importWeapon" accept=".json" style="display: none;" onchange="importItem(event, 'weapons')">
+			<button class="with-icon icon6" onclick="document.getElementById('importWeapon').click();">导入武器</button>
 		</div>
 	</div>
 
@@ -356,6 +360,9 @@
 		<div class="text-center">
 			<button onclick="SavegameEditor.restoreDurability('bows')">恢复耐久</button>
 			<button class="with-icon icon1" onclick="SavegameEditor.addItem('bows')">新增弓</button>
+			<button class="with-icon icon7" onclick="SavegameEditor.exportItem('bows')">导出弓</button>
+			<input type="file" id="importBows" accept=".json" style="display: none;" onchange="importItem(event, 'bows')">
+			<button class="with-icon icon6" onclick="document.getElementById('importBows').click();">导入弓</button>
 		</div>
 		<h3>箭</h3><div id="container-arrows"></div>
 	</div>
@@ -366,6 +373,9 @@
 		<div class="text-center">
 			<button onclick="SavegameEditor.restoreDurability('shields')">恢复耐久</button>
 			<button class="with-icon icon1" onclick="SavegameEditor.addItem('shields')">新增盾</button>
+			<button class="with-icon icon7" onclick="SavegameEditor.exportItem('shields')">导出盾</button>
+			<input type="file" id="importShields" accept=".json" style="display: none;" onchange="importItem(event, 'shields')">
+			<button class="with-icon icon6" onclick="document.getElementById('importShields').click();">导入盾</button>
 		</div>
 	</div>
 

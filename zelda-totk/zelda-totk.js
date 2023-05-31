@@ -435,40 +435,6 @@ SavegameEditor={
 		document.getElementById('container-'+newItem.category).appendChild(row);
 		row.scrollIntoView({behavior:'smooth',block:'center'});
 	},
-	
-	addMissingItem:function(catId){
-		var categoryHash=capitalizeCategoryId(catId);
-		var maxItems=SavegameEditor.readU32('Array'+categoryHash+'Ids');
-
-		empty('container-'+catId);
-		SavegameEditor.currentItems[catId] = [];
-
-		var itemList=this.getTranslationHash(catId);
-		var index = 0;
-		for(id in itemList){
-			var newItem;
-			if(catId==='materials' || catId==='food' || catId==='devices'){
-				newItem=new Item(catId, index++, id, 888);
-			} else if(catId==='armors') {
-				if (itemList[id].includes('(')) continue;
-				var has4Star;
-				if (itemList[id].endsWith('★'))
-					has4Star = Object.values(itemList).some(value => value.includes(itemList[id].replaceAll('★','')+'★★★★'));
-				else 
-					has4Star = Object.values(itemList).some(value => value.includes(itemList[id]+' ★★★★'));
-				if (has4Star && itemList[id].includes('★★★★') || !has4Star)
-					newItem=new Armor(index++, id);
-				else
-					continue; 
-			}
-			newItem.removable=true;
-			this.currentItems[catId].push(newItem);
-			var row=this._createItemRow(newItem);
-			document.getElementById('container-'+newItem.category).appendChild(row);
-			lastItem=this.getLastItem(catId);
-		};
-		row.scrollIntoView({behavior:'smooth',block:'center'});
-	},
 
 	getLastItem:function(catId){
 		var lastIndex=-1;
