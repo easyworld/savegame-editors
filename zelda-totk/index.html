@@ -20,7 +20,7 @@
 	<script type="text/javascript" src="./zelda-totk.class.compendium.js"></script>
 	<script type="text/javascript" src="./zelda-totk.master.js"></script>
 	<script type="text/javascript" src="./zelda-totk.extend.js"></script>
-	<!-- <script type="text/javascript" src="./murmurhash3js.min.js"></script> -->
+	<script type="text/javascript" src="./murmurhash3js.min.js"></script>
 	<script type="text/javascript"><!--
 		/* service worker */
 		/*var FORCE_HTTPS=true;
@@ -250,7 +250,7 @@
 		</div>
 	
 		<!-- Coordinates -->
-		<h3 class="border-green">坐标</h3>
+		<h3 class="border-orange">坐标</h3>
 		<div class="row">
 			<div class="six columns"><label for="float-pos-x">当前林克坐标(XYZ)</label></div>
 			<div class="two columns"><input id="float-pos-x" class="full-width" type="text" /></div>
@@ -268,8 +268,8 @@
 	
 
 
-		<!-- COMPLETIONISM -->
-		<h3 class="border-blue">完成度</h3>
+		<!-- MAP PINS -->
+		<h3 class="border-blue">地图钉</h3>
 		<div class="row mb-10">
 			<div class="four columns">地图钉 <span id="span-pin-counter"></span></div>
 			<div class="eight columns text-right">
@@ -277,11 +277,30 @@
 			</div>
 		</div>
 		<div class="row mb-10">
-			<div class="four columns"><label for="number-koroks">在地图上标记克洛格位置</label></div>
+			<div class="four columns">克洛格</div>
 			<div class="eight columns text-right">
-				<button onclick="SavegameEditor.addKorokPins(0, 299)">克洛格 #001-#300</button>
-				<button onclick="SavegameEditor.addKorokPins(300, 599)">克洛格 #301-#600</button>
-				<button onclick="SavegameEditor.addKorokPins(600, 899)">克洛格 #601-#900</button>
+				<button onclick="SavegameEditor.addPinsKoroksHidden()">在地图上标记未找到的克洛格位置</button>
+				<button onclick="SavegameEditor.addPinsKoroksCarry()">在地图上标记未搬运的克洛格位置</button>
+			</div>
+		</div>
+		<div class="row mb-10">
+			<div class="four columns">神庙/破魔之根</div>
+			<div class="eight columns text-right">
+				<button onclick="SavegameEditor.addPinsShrines()">在地图上标记未找到的神庙位置</button>
+				<button onclick="SavegameEditor.addPinsLightroots()">在地图上标记未找到的破魔之根位置</button>
+			</div>
+		</div>
+
+		<!-- COMPLETIONISM -->
+		<h3 class="border-red">完成度</h3>
+		<div class="row mb-10">
+			<div class="four columns">
+				Koroks - <span id="span-korok-hidden-counter"></span>
+				- Carried: <span id="span-korok-carry-counter"></span> (&times;2)
+			</div>
+			<div class="eight columns text-right">
+				<button onclick="Korok.setAllHiddenAsFound()">设置所有800个克洛格为已发现</button>
+				<button onclick="Korok.setAllCarryAsFound()">设置所有100个克洛格为已搬运</button>
 			</div>
 		</div>
 
@@ -310,7 +329,7 @@
 			</div>
 		</div> -->
 		<div class="row mb-10">
-			<div class="four columns">海拉鲁图鉴 <span id="span-compendium-counter"></span></div>
+			<div class="four columns">海拉鲁图鉴 - <span id="span-compendium-counter"></span></div>
 			<div class="eight columns text-right">
 				<button onclick="Compendium.setToStock(false)">恢复默认图片</button>
 				<button onclick="Compendium.setToStock(true)">解锁所有</button>
@@ -319,7 +338,6 @@
 		<div class="row mb-10">
 			<div class="four columns">神庙 - 已发现: <span id="span-shrines-found-counter"></span> - 已完成: <span id="span-shrines-clear-counter"></span></div>
 			<div class="eight columns text-right">
-				<button onclick="SavegameEditor.addLocationPinsShrines()">在地图上标记未发现神庙</button>
 				<button onclick="Shrine.setAllAsFound()">设置所有神庙已发现</button>
 				<button onclick="Shrine.setAllAsClear()">设置所有神庙已完成</button>
 			</div>
@@ -327,7 +345,6 @@
 		<div class="row mb-10">
 			<div class="four columns">破魔之根 - 已发现: <span id="span-lightroots-found-counter"></span> - 已激活: <span id="span-lightroots-clear-counter"></span></div>
 			<div class="eight columns text-right">
-				<button onclick="SavegameEditor.addLocationPinsLightroots()">在地图上标记未发现破魔之根</button>
 				<button onclick="Lightroot.setAllAsFound()">设置所有破魔之根已发现</button>
 				<button onclick="Lightroot.setAllAsClear()">设置所有破魔之根已激活</button>
 			</div>
