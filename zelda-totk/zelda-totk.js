@@ -541,7 +541,7 @@ SavegameEditor={
 		}
 
 		this.refreshMapPinsCounter();
-		MarcDialogs.alert(count+' map pins added');
+		MarcDialogs.alert(count+'个地图钉已添加');
 		return count;
 	},
 	addPinsKoroksHidden:function(){
@@ -556,7 +556,7 @@ SavegameEditor={
 		}
 
 		this.refreshMapPinsCounter();
-		MarcDialogs.alert(count+' map pins added');
+		MarcDialogs.alert(count+'个地图钉已添加');
 		return count;
 	},
 	addPinsShrines:function(){
