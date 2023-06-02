@@ -13,7 +13,7 @@ var Schematics={
 			if(val===1)
 				count++;
 			else if(val!==0)
-				console.error('invalid schematics clear value: '+val);
+				console.error('无效的设计图发现标记值: '+val);
 		}
 		return count;
 	},
@@ -34,7 +34,7 @@ var Schematics={
 
 		var count=countStone + countYiga;
 
-		MarcDialogs.alert(count+' schematics set as found.');
+		MarcDialogs.alert(count+'张设计图被设置为已发现.');
 		if(countStone)
 			SavegameEditor.addItem('key', 'Obj_AutoBuilderDraft_00', countStone);
 		if(countYiga)
