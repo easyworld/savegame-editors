@@ -1,5 +1,5 @@
 /*
-	The legend of Zelda: Tears of the Kingdom savegame editor v20230602
+	The legend of Zelda: Tears of the Kingdom savegame editor v20230603
 
 	by Marc Robledo 2023
 */
@@ -680,6 +680,13 @@ SavegameEditor={
 		}, false);
 
 		/* prepare fusable items list */
+		Equipment.KNOWN_FUSABLE_MATERIALS.forEach(function(itemId){
+			Equipment.FUSABLE_ITEMS.push({value:itemId,name:'*Material: '+Item.TRANSLATIONS.materials[itemId] || itemId})
+		});
+
+		Equipment.KNOWN_FUSABLE_OBJECTS.forEach(function(itemId){
+			Equipment.FUSABLE_ITEMS.push({value:itemId,name:'Environment: '+itemId})
+		});
 		for(var itemId in Equipment.TRANSLATIONS.weapons){
 			if(!/^Weapon_Sword_07/.test(itemId))
 				Equipment.FUSABLE_ITEMS.push({value:itemId, name:'武器: '+Equipment.TRANSLATIONS.weapons[itemId]})

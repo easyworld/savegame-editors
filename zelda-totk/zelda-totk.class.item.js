@@ -1,5 +1,5 @@
 /*
-	The legend of Zelda: Tears of the Kingdom Savegame Editor (Item class) v20230601
+	The legend of Zelda: Tears of the Kingdom Savegame Editor (Item class) v20230603
 
 	by Marc Robledo 2023
 	item names compiled by Echocolat, Exincracci, HylianLZ and Karlos007
@@ -497,6 +497,18 @@ Item_Enemy_228:'奥尔龙的龙岩石',
 Item_Enemy_229:'聂尔龙的龙岩石',
 Item_Enemy_230:'费罗龙的龙岩石',
 Item_Enemy_231:'白龙的龙岩石',
+
+Item_Enemy_137:'岩石巨人的心岩', //fusable only
+Item_Enemy_138:'夜光石岩石巨人的心岩', //fusable only
+Item_Enemy_139:'稀有石岩石巨人的心岩', //fusable only
+Item_Enemy_140:'熔岩巨人的心岩', //fusable only
+Item_Enemy_141:'冰岩巨人的心岩', //fusable only
+Item_Enemy_220:'急冻盖拉的大颚', //fusable only
+Item_Enemy_221:'巨砾哥马的岩脚', //fusable only
+Item_Enemy_223:'吉波得女王的巨大翅膀', //fusable only
+Item_Enemy_225:'方块魔像的核心', //fusable only
+Item_Enemy_226:'中等方块魔像的核心', //fusable only
+Item_Enemy_227:'上等方块魔像的核心', //fusable only
 
 Item_FishGet_A:'海拉鲁鲈鱼',
 Item_FishGet_AA:'远昔骨舌鱼',
