@@ -1,5 +1,5 @@
 /*
-	The legend of Zelda: Tears of the Kingdom Savegame Editor (Equipment class) v20230528
+	The legend of Zelda: Tears of the Kingdom Savegame Editor (Equipment class) v20230602
 
 	by Marc Robledo 2023
 	item names compiled by Echocolat, Exincracci, HylianLZ and Karlos007
@@ -575,6 +575,9 @@ Weapon_Shield_107:'残旧的木盾'
 
 Equipment.FUSABLE_ITEMS=[
 {value:'',name:'无余料建造'},
+{value:'Item_Enemy_140',name:'材料★: 熔岩巨人的心岩'},
+{value:'Item_Enemy_138',name:'材料★: 夜光石岩石巨人的心岩'},
+{value:'Item_Enemy_227',name:'材料★: 上等方块魔像的核心'},
 {value:'AsbObj_RockParts_C_S_01',name:'环境物品: AsbObj_RockParts_C_S_01'},
 {value:'AsbObj_SharpRock_A_S_01',name:'环境物品: AsbObj_SharpRock_A_S_01'},
 {value:'AsbObj_WhiteWoodRectangle_A_LL_01',name:'环境物品: AsbObj_WhiteWoodRectangle_A_LL_01'},
@@ -583,7 +586,9 @@ Equipment.FUSABLE_ITEMS=[
 {value:'DgnObj_SpikeBall_A',name:'环境物品: DgnObj_SpikeBall_A'},
 {value:'DgnObj_SpikeBallWood_A',name:'环境物品: DgnObj_SpikeBallWood_A'},
 {value:'IceWall_Piece',name:'环境物品: IceWall_Piece'},
-{value:'Obj_GerudoHoleCover_A_03',name:'环境物品: Obj_GerudoHoleCover_A_03'},
+{value:'Obj_GerudoHoleCover_A_03',name:'环境物品: 沙海象像'},
 {value:'Obj_LiftRockWhite_A_01',name:'环境物品: Obj_LiftRockWhite_A_01'},
-{value:'Obj_SpikeBall_B',name:'环境物品: Obj_SpikeBall_B'}
+{value:'Obj_SpikeBall_B',name:'环境物品: Obj_SpikeBall_B'},
+{value:'Obj_TreeApple_A_M_01_Treant_Trunk',name:'环境物品: Obj_TreeApple_A_M_01_Treant_Trunk'},
+{value:'Obj_TreeWood_A_L_Treant_ForAttachment',name:'环境物品: Obj_TreeWood_A_L_Treant_ForAttachment'}
 ];
