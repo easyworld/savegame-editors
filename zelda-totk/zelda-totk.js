@@ -681,11 +681,11 @@ SavegameEditor={
 
 		/* prepare fusable items list */
 		Equipment.KNOWN_FUSABLE_MATERIALS.forEach(function(itemId){
-			Equipment.FUSABLE_ITEMS.push({value:itemId,name:'*Material: '+Item.TRANSLATIONS.materials[itemId] || itemId})
+			Equipment.FUSABLE_ITEMS.push({value:itemId,name:'*材料: '+Item.TRANSLATIONS.materials[itemId] || itemId})
 		});
 
 		Equipment.KNOWN_FUSABLE_OBJECTS.forEach(function(itemId){
-			Equipment.FUSABLE_ITEMS.push({value:itemId,name:'Environment: '+itemId})
+			Equipment.FUSABLE_ITEMS.push({value:itemId,name:'环境物品: '+itemId})
 		});
 		for(var itemId in Equipment.TRANSLATIONS.weapons){
 			if(!/^Weapon_Sword_07/.test(itemId))
