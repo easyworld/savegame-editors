@@ -1,7 +1,6 @@
 SavegameEditor['addMissingItem'] = function (catId) {
     var categoryHash = capitalizeCategoryId(catId);
-    var maxItems = SavegameEditor.readU32('Array' + categoryHash + 'Ids');
-
+    var fusionIds = ['Item_Enemy_137','Item_Enemy_138','Item_Enemy_139','Item_Enemy_140','Item_Enemy_141','Item_Enemy_220','Item_Enemy_221','Item_Enemy_223','Item_Enemy_225','Item_Enemy_226','Item_Enemy_227'];
     empty('container-' + catId);
     SavegameEditor.currentItems[catId] = [];
 
@@ -10,6 +9,7 @@ SavegameEditor['addMissingItem'] = function (catId) {
     for (id in itemList) {
         var newItem;
         if (catId === 'materials' || catId === 'food' || catId === 'devices') {
+            if (fusionIds.includes(id)) continue;
             newItem = new Item(catId, index++, id, 888);
         } else if (catId === 'armors') {
             if (itemList[id].includes('(')) continue;
