@@ -134,7 +134,7 @@ Item_Ore_M:999999, //Large Zonaite
 Energy_Material_01:999999, //Crystallized Charge
 //Energy_Material_03:999999, //Large Crystallized Charge
 //Energy_Material_04:999999, //Huge Crystallized Charge
-Obj_WarpDLC:3, //Travel Medallion
+Obj_WarpDLC:999, //Travel Medallion
 MinusRupee_00:999999 //Poe
 //MinusRupee_01:999999, //Large Poe
 //MinusRupee_02:999999 //Grand Poe
