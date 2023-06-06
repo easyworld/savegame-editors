@@ -79,7 +79,7 @@ function importItem(event, catId) {
             let name = (catId == 'weapons') ? 'swords' : catId;
             setValue('number-pouch-size-'+name, pounchSize);
         }
-        
+        SavegameEditor.currentItems[catId] = [];
         for (let i = 0; i < a.length; i++) {
             var newItem;
             if (catId === 'weapons' || catId === 'bows' || catId === 'shields') {
